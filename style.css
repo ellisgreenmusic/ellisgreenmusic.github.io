@@ -1,0 +1,345 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #141414; /* for footer*/
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+body, html {
+	height: auto;
+}
+/* Navigation bar */
+.navbar {
+	height: 100px;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .15);
+	border-top: 1px solid lightgrey;
+	/* Stick to top of browser */
+	position: -webkit-sticky; 
+  	position: sticky;
+	top: 0;
+	/* Vertically align text */
+	line-height: 100px;
+	/* Prevent highlighting */
+	user-select: none;
+	/* On top of page content */
+	z-index: 1;
+}
+.logo {
+	float: left;
+	/* Center image vertically */
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.logo:hover {
+	cursor: pointer;
+	filter: brightness(115%);
+}
+.logo-image {
+	vertical-align: middle;
+}
+.logo-text {
+	font-weight: bold;
+	font-size: 24pt;
+	color: #008000;
+}
+.tabs {
+	padding-right: 20px;
+	float: right;
+	/* Not displayed on narrow screens */
+	display: none;
+	margin: 0;
+}
+.tab {
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: white;
+	font-size: 12pt;
+	height: 97px;
+	/* Animate on hover */
+	transition: all .1s;
+}
+.active {
+	font-weight: bold;
+}
+.tab.active {
+	color: #008000;
+	border-bottom: 3px solid;
+}
+.tab:hover {
+	cursor: pointer;
+	background-color: whitesmoke;
+}
+.tab:hover:not(.active) {
+	border-bottom: 3px solid grey;
+}
+/* Side menu */
+.overflow-button {
+	float: left;
+	/* Text/button styling */
+	font-size: 36px;
+	line-height: 80px;
+	text-align: center;
+	/* Position within circle */
+	width: 80px; 
+	height: 80px;
+	margin: 10px;
+	border-radius: 50%;
+	/* Animate background color on hover */
+	background-color: white;
+	transition: background-color .15s;
+}
+.overflow-button:hover {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+.menu {
+	background-color: #333333;
+	height: 100%;
+	width: 70%;
+	overflow-x: hidden;
+	/* Position off screen */
+	position: fixed;
+	top: 0;
+	left: -70%;
+	/* Animate slide in */
+	transition: left 0.4s;
+	/* Position above overlay and navbar */
+	z-index: 3;
+}
+.menu-link {
+	padding-left: 20px;
+	width: 100%;
+	/* Text styling */
+	color: white;
+	font-size: 14pt;
+	line-height: 60px;
+	/* Animate background color on hover */
+	background-color: #333333;
+	transition: background-color .1s;
+}
+.menu-link:hover {
+	background-color: #595959;
+	cursor: pointer;
+}
+/* Overlay used for side menu and gallery */
+.overlay {
+	/* Cover screen */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Position behind menu */
+	z-index: 2;
+	/* Animate opacity when menu is opened*/
+	background:rgba(0, 0, 0, 0.75);
+	opacity: 0;
+	transition: opacity 0.4s;
+	/* Ignore cursor when not shown */
+	pointer-events: none;
+	/* Align children in center (for gallery images) */
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center; 
+}
+/* Desktop styling */
+@media only screen and (min-width: 960px) {
+	.logo {
+		margin-left: 40px;
+	}
+	.tabs {
+		display: block;
+	}
+	.overflow-button {
+		display: none;
+	}
+}
+/* Footer */
+footer {
+	padding: 30px 0px 30px 0px;
+	color: #808080;
+}
+footer a {
+	color: #808080;
+}
+.footer-text {
+	font-size: 9pt;
+	text-align: center;
+}
+/* Front page banner */
+.banner {
+	position: relative;
+}
+.banner-image {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+/* Page content */
+.page {
+	padding: 40px 30px 40px 30px;
+	background-color: whitesmoke;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 11pt;
+	
+}
+.page-entry {
+	width: 867px;
+	max-width: 90vw;
+	padding: 0 10px 0 10px;
+	text-align: center;
+}
+.page-title-container {
+	width: 100%;
+	border-bottom: 2px solid #008000;
+	margin-bottom: 20px;
+}
+.page-title {
+	width: min-content;
+	text-align: left;
+	font-size: 24pt;
+	font-weight: bold;
+	color: #008000;
+	border-bottom: 4px solid #008000;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.page-item {
+	vertical-align: text-top;
+	text-align: left;
+	display: inline-block;
+	max-width: 400px;
+	margin: 15px;
+}
+.feature-image {
+	margin-bottom: 10px;
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+}
+.feature-image-subtitle {
+	font-size: 10pt;
+	text-align: center;
+	font-style: italic;
+	width: 100%;
+}
+.break {
+	width: 100%;
+	height: 0;
+}
+.anchor {
+	display: block;
+	position: relative;
+	top: -100px;
+}
+/* Text */
+.highlight-text {
+	color: #008000;
+	font-weight: bold;
+}
+.title-text {
+	font-weight: bold;
+	font-size: 24pt;
+	padding-bottom: 10px;
+}
+.music-title-text {
+	font-size: 30pt;
+	font-weight: bold;
+}
+.music-subtitle-text {
+	font-size: 10pt;
+	font-style: italic;
+	padding-bottom: 15px;
+}
+.content-text {
+	font-size: 10pt;
+	line-height: 150%;
+}
+/* Cards (unused) */
+.card {
+	background-color: white;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+	background-color: white;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.card-text {
+	padding: 30px;
+}
+.card-title-container {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 50px;
+}
+.card-title-text {
+	color: #008000;
+	font-size: 20pt;
+}
+/* Buttons */
+.button {
+	background-color: #008000;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: all .1s;
+}
+.button:hover {
+	background-color: #006600;
+	cursor: pointer;
+}
+.button-container {
+	text-align: center;
+	margin-top: 15px;
+}
+/* Contact */
+.contact-table {
+	text-align: left;
+	width: 100%;
+	padding-top: 20px;
+}
+.contact-header {
+	font-size: 10pt;
+	line-height: 150%;
+}
+.contact-text {
+	font-size: 30pt;
+}
+/* Dropdown (hidden content) */
+.dropdown {
+	width: 100%; 
+	text-align: center; 
+	border-bottom: 1px solid grey; 
+	line-height: 0;
+	font-size: 20pt;
+	margin-bottom: 30px;
+}
+.dropdown span {
+	font-weight: normal;
+	font-size: 10pt;
+	background-color: whitesmoke;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.dropdown span:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: 10pt;
+	background-color: whitesmoke;
+	padding-left: 20px;
+	padding-right: 20px;
+}

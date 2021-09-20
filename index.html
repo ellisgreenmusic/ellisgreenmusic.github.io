@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<title>Ellis Green Music</title>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<div class="navbar">
+			<div class="overflow-button" onclick="openMenu();">≡</div>
+			<div class="logo" onclick="navigate(0);">
+				<img class="logo-image" src="images/logo.png"/>
+			</div>
+			<div class="tabs">
+				<div class="tab active" onclick="navigate(0);">HOME</div>
+				<div class="tab" onclick="navigate(1);">ABOUT</div>
+				<div class="tab" onclick="navigate(2);">MUSIC</div>
+				<div class="tab" onclick="navigate(3);">CONTACT</div>
+			</div>
+		</div>
+		<!-- Menu -->
+		<div class="menu" id="menu">
+			<div class="menu-link active" onclick="closeMenu(); navigate(0);">HOME</div>
+			<div class="menu-link" onclick="closeMenu(); navigate(1);">ABOUT</div>
+			<div class="menu-link" onclick="closeMenu(); navigate(2);">MUSIC</div>
+			<div class="menu-link" onclick="closeMenu(); navigate(3);">CONTACT</div>
+		</div>
+		<div class="overlay" id="menu-overlay" onclick="closeMenu();"></div>
+		<!-- Home -->
+		<div class="anchor" id="home-anchor"></div>
+		<div class="banner" style="height: 80vh">
+			<img class="banner-image" src="images/home-header.png" />
+		</div>
+		<!-- About -->
+		<div class="anchor" id="about-anchor"></div>
+		<div class="page">
+			<div class="page-entry">
+				<div class="page-title-container">
+					<div class="page-title">
+						About
+					</div>
+				</div>
+				<div class="page-item">
+					<div class="content-text">
+						Ellis Green is a jazz bass player from Phoenix, Arizona. He began playing the upright bass in college, where he became interested in jazz.
+						Since then, he has also occasionally performed on the piano.
+						During his time participating in the Jazz Studies program at Arizona State University, Ellis had the opportunity to study with teachers including Michael Kocour and Lewis Nash.
+						<br><br>
+						Ellis has played at many venues around the Valley including The Nash, the premier jazz club in the Phoenix area. 
+						In the summer of 2018, he headlined a show at The Nash as part of its "Emerging Artist" series, performing a program of piano trio interpretations of compositions by Tadd Dameron.
+						Those trio interpretations were later adapted and recorded for <i>Tadd!</i>, his first album.
+						<br><br>
+					</div>
+				</div>
+				<div class="page-item">
+					<img class="feature-image" src="images/about-image.png" alt="Image courtesy of Bill Goodman (facebook.com/fotosbill)">
+					<div class="feature-image-subtitle">Ellis in September 2019 - Photo by Bill Goodman</div>
+				</div>
+			</div>
+		</div>
+		<!-- Music -->
+		<div class="anchor" id="music-anchor"></div>
+		<div class="page">
+			<div class="page-entry">
+				<div class="page-title-container">
+					<div class="page-title">
+						Music
+					</div>
+				</div>
+				<iframe
+					class="page-item"
+					style="border: 0; height: 510px; width: 400px;"
+					src="https://bandcamp.com/EmbeddedPlayer/album=2987950598/size=large/bgcol=141414/linkcol=ffffff/tracklist=false/transparent=true/" 
+					seamless>
+					<a href="https://ellisrgreen.bandcamp.com/album/tadd">Tadd! by Ellis Green</a>
+				</iframe>
+				<div class="page-item">
+					<div class="music-title-text">Tadd!</div>
+					<div class="music-subtitle-text">June 2019</div>
+					<div class="content-text">
+						Ellis' first album, <i>Tadd!</i> is a set of trio interpretations of several pieces written by jazz composer and pianist Tadd Dameron. 
+						It was recorded in fall 2018 by Clarke Rigsby of Tempest Recording.
+						<br><br>
+						<i>Tadd!</i> features Ellis Green on piano, Max Beckman on bass, and Filip Tipei on drums.
+					</div>
+				</div>
+			</div>
+			<div class="break"></div>
+			<div class="hidden" id="hidden" style="display: none;">
+				<div class="page-entry">
+					<iframe 
+						class="page-item"
+						width="400px"
+						height="450px"
+						scrolling="no" 
+						frameborder="no" 
+						allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/992481784&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+					<div class="page-item">
+						<div class="music-title-text">Chordless</div>
+						<div class="music-subtitle-text">October 2019</div>
+						<div class="content-text">
+							Helmed by trumpet player Alex <!-- "The Rat" --> Price, Chordless is a trio devoted to playing straight-ahead jazz without a traditional accompaning instrument (like piano or guitar).
+							This is a set of demos recorded by the group, which illustrate its chord-free approach with performances of a few jazz standards.
+							<br><br>
+							Chordless consists of Alex Price on trumpet, Ellis Green on bass, and Sam Russo on drums.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="break"></div>
+			<div class="page-entry">
+				<h2 class="dropdown" id="dropdown" onclick="showOrHide();"><span>Show more &or;</span></h2>
+			</div>
+		</div>
+		<!-- Contact -->
+		<div class="anchor" id="contact-anchor"></div>
+		<div class="banner" style="height: 50vh">
+			<img class="banner-image" src="images/contact-header.png" />
+		</div>
+		<div class="page">
+			<div class="page-entry">
+				<div class="page-title-container">
+					<div class="page-title">
+						Contact
+					</div>
+				</div>
+				<div class="page-item">
+					<span class="contact-header"><b>PHONE</b></span>
+					<br>
+					<span class="contact-text">(602) 770-0329</span>
+				</div>
+				<div class="page-item">
+					<span class="contact-header"><b>EMAIL</b> (PREFERRED)</span>
+					<br>
+					<span class="contact-text">ellis.r.green@gmail.com</span>
+				</div>
+				<br><br>
+				<i>Comments and questions are welcome!</i>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<div class="footer-text">Site design © Ellis Green. All rights reserved.<br>
+			Images courtesy of <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		//Slide-out menu
+		let menu = document.getElementById("menu");
+		let menuOverlay = document.getElementById("menu-overlay");
+		function openMenu() {
+			menu.style.left = "0px";
+			menu.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, .5)";
+			menuOverlay.style.opacity = "1";
+			menuOverlay.style.pointerEvents = "auto";
+		}
+		function closeMenu() {
+			menu.style.left = "-70%";
+			menu.style.boxShadow = "none";
+			menuOverlay.style.opacity = "0";
+			menuOverlay.style.pointerEvents = "none";
+		}
+		//Navbar navigation
+		let tabs = document.getElementsByClassName("tab");
+		let menu_links = document.getElementsByClassName("menu-link");
+		let anchors = document.getElementsByClassName("anchor");
+		function navigate(index) {
+			for(let i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("active");
+				menu_links[i].classList.remove("active");
+			}
+			tabs[index].classList.add("active");
+			menu_links[index].classList.add("active");
+			anchors[index].scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			});
+		}
+		//Hidden section
+		let hidden = document.getElementById("hidden");
+		let dropdown = document.getElementById("dropdown");
+		let isHidden = true;
+		function showOrHide() {
+			if(isHidden) {
+				hidden.style.display = "block";
+				dropdown.innerHTML = "<span>Show less &and;</span>";
+				isHidden = false;
+			} else {
+				hidden.style.display = "none";
+				dropdown.innerHTML = "<span>Show more &or;</span>";
+				isHidden = true;
+			}
+		}
+	</script>
+</html>
