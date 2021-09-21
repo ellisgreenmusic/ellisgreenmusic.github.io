@@ -2,16 +2,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<title>Ellis Green Music</title>
 	</head>
 	<body>
-		<!-- Navigation bar -->
-		<div class="navbar">
-			<div class="overflow-button" onclick="openMenu();">≡</div>
+		<!-- Desktop navbar -->
+		<div class="navbar navbar-desktop">
 			<div class="logo" onclick="navigate(0);">
 				<img class="logo-image" src="images/logo.png"/>
 			</div>
@@ -20,6 +19,13 @@
 				<div class="tab" onclick="navigate(1);">ABOUT</div>
 				<div class="tab" onclick="navigate(2);">MUSIC</div>
 				<div class="tab" onclick="navigate(3);">CONTACT</div>
+			</div>
+		</div>
+		<!-- Navigation bar -->
+		<div class="navbar navbar-mobile">
+			<div class="overflow-button" onclick="openMenu();">≡</div>
+			<div class="logo" onclick="navigate(0);">
+				<img class="logo-image" src="images/logo.png"/>
 			</div>
 		</div>
 		<!-- Menu -->
@@ -71,13 +77,14 @@
 						Music
 					</div>
 				</div>
-				<iframe
-					class="page-item"
-					style="border: 0; height: 510px; width: 400px;"
-					src="https://bandcamp.com/EmbeddedPlayer/album=2987950598/size=large/bgcol=141414/linkcol=ffffff/tracklist=false/transparent=true/" 
-					seamless>
+				<div class="page-item">
+					<iframe 
+						style="border: 0; width: 350px; max-width: 100%; height: 470px;" 
+						src="https://bandcamp.com/EmbeddedPlayer/album=2987950598/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" 
+						seamless>
 					<a href="https://ellisrgreen.bandcamp.com/album/tadd">Tadd! by Ellis Green</a>
-				</iframe>
+					</iframe>
+				</div>
 				<div class="page-item">
 					<div class="music-title-text">Tadd!</div>
 					<div class="music-subtitle-text">June 2019</div>
@@ -92,15 +99,15 @@
 			<div class="break"></div>
 			<div class="hidden" id="hidden" style="display: none;">
 				<div class="page-entry">
-					<iframe 
-						class="page-item"
-						width="400px"
-						height="450px"
-						scrolling="no" 
-						frameborder="no" 
-						allow="autoplay" 
-						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/992481784&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-					</iframe>
+					<div class="page-item">
+						<iframe 
+							style="border: 0; width: 350px; max-width: 100%; height: 450px;"
+							scrolling="no" 
+							frameborder="no" 
+							allow="autoplay" 
+							src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/992481784&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+						</iframe>
+					</div>
 					<div class="page-item">
 						<div class="music-title-text">Chordless</div>
 						<div class="music-subtitle-text">October 2019</div>
@@ -113,7 +120,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="break"></div>
 			<div class="page-entry">
 				<h2 class="dropdown" id="dropdown" onclick="showOrHide();"><span>Show more &or;</span></h2>
 			</div>
