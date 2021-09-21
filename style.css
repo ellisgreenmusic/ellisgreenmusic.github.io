@@ -197,10 +197,9 @@ footer a {
 }
 .page-entry {
 	text-align: center;
-	width: 867px;
-	max-width: 100vw;
+	max-width: 867px;
 	
-	/* background-color: red; */
+	background-color: red;
 }
 .page-title-container {
 	width: 100%;
@@ -222,13 +221,15 @@ footer a {
 	vertical-align: text-top;
 	text-align: left;
 	display: inline-block;
-	padding: 15px;
+	padding: 20px;
 	max-width: 400px;
-	/* background-color: blue; */
+	background-color: blue;
 }
 .feature-image {
 	margin-bottom: 10px;
 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+	width: auto;
+	height: auto;
 }
 .feature-image-subtitle {
 	font-size: 10pt;
