@@ -185,19 +185,22 @@ footer a {
 }
 /* Page content */
 .page {
-	padding: 40px 30px 40px 30px;
+	padding-top: 40px;
+	/* background-color: green; */
 	background-color: whitesmoke;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	font-size: 11pt;
 	
+	
 }
 .page-entry {
-	width: 867px;
-	max-width: 90vw;
-	padding: 0 10px 0 10px;
 	text-align: center;
+	width: 867px;
+	max-width: 100vw;
+	
+	/* background-color: red; */
 }
 .page-title-container {
 	width: 100%;
@@ -207,7 +210,7 @@ footer a {
 .page-title {
 	width: min-content;
 	text-align: left;
-	font-size: 24pt;
+	font-size: 20pt;
 	font-weight: bold;
 	color: #008000;
 	border-bottom: 4px solid #008000;
@@ -219,8 +222,9 @@ footer a {
 	vertical-align: text-top;
 	text-align: left;
 	display: inline-block;
+	padding: 15px;
 	max-width: 400px;
-	margin: 15px;
+	/* background-color: blue; */
 }
 .feature-image {
 	margin-bottom: 10px;
@@ -316,7 +320,7 @@ footer a {
 	line-height: 150%;
 }
 .contact-text {
-	font-size: 30pt;
+	font-size: 20pt;
 }
 /* Dropdown (hidden content) */
 .dropdown {
