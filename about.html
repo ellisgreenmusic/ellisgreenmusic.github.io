@@ -10,7 +10,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-		<title>Ellis Green: Home</title>
+		<title>Ellis Green: About</title>
 	</head>
 	<body>
 		<!-- Mobile navbar-->
@@ -26,8 +26,8 @@
 			</div>
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Home</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='about.html';">About</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='index.html';">Home</div>
+			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">About</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='music.html';">Music</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='contact.html';">Contact</div>
 		</div>
@@ -35,22 +35,30 @@
 		<div class="sidebar sidebar-desktop unselectable">
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Home</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='about.html';">About</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='index.html';">Home</div>
+			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">About</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='music.html';">Music</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='contact.html';">Contact</div>
 		</div>
 		<!-- Page content -->
 		<div class="page">
-			<div style="width: 100%">
-				<div class="home-page-header condensed unselectable">
-					<div class="home-page-header-container">
-						<div class="home-page-header-title">ELLIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>GREEN&nbsp;&nbsp;</div>
-						<div class="home-page-header-subtitle">JAZZ BASS &bull; PHOENIX, ARIZONA</div>
-					</div>
+			<div class="page-content">
+				<div class="page-mobile-spacer"></div>
+				<div class="page-title big-text condensed">ABOUT</div>
+				<div class="page-entry regular-text">
+					Ellis Green is a jazz bass player from Phoenix, Arizona. He began playing the upright bass in college, where he became interested in jazz.
+					Since then, he has also occasionally performed on the piano.
+					During his time participating in the Jazz Studies program at Arizona State University, Ellis had the opportunity to study with teachers including Michael Kocour and Lewis Nash.
+					<br><br>
+					Ellis has played at many venues around the Valley including The Nash, the premier jazz club in the Phoenix area. 
+					In the summer of 2018, he headlined a show at The Nash as part of its "Emerging Artist" series, performing a program of piano trio interpretations of compositions by Tadd Dameron.
+					Those trio interpretations were later adapted and recorded for <i>Tadd!</i>, his first album.
+				</div>
+				<div class="page-entry">
+					<img class="page-image" src="images/about-image.png" alt="Image courtesy of Bill Goodman (facebook.com/fotosbill)">
+					<div class="page-image-caption small-text grey-text">Ellis in September 2019 - Photo by Bill Goodman</div>
 				</div>
 			</div>
-			<img style="width: 100%; min-height: 70vh; object-fit: cover;" src="images/home-banner.png" />
 			<footer>
 				<div class="small-text grey-text">
 					Site design © Ellis Green. All rights reserved.<br>

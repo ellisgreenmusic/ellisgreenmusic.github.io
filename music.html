@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+		<title>Ellis Green: Music</title>
+	</head>
+	<body>
+		<!-- Mobile navbar-->
+		<div class="navbar unselectable" onclick="openMenu();">
+			<div class="navbar-button">≡</div>
+		</div>
+		<!-- Mobile sidebar overlay -->
+		<div class="overlay" id="overlay" onclick="closeMenu();"></div>
+		<!-- Mobile sidebar -->
+		<div class="sidebar sidebar-mobile unselectable" id="sidebar-mobile">
+			<div class="sidebar-close-button-container unselectable">
+				<div class="sidebar-close-button" onclick="closeMenu();">&times;</div>
+			</div>
+			<div class="sidebar-logo big-text condensed">Ellis Green</div>
+			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='index.html';">Home</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='about.html';">About</div>
+			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Music</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='contact.html';">Contact</div>
+		</div>
+		<!-- Desktop sidebar -->
+		<div class="sidebar sidebar-desktop unselectable">
+			<div class="sidebar-logo big-text condensed">Ellis Green</div>
+			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='index.html';">Home</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='about.html';">About</div>
+			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Music</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='contact.html';">Contact</div>
+		</div>
+		<!-- Page content -->
+		<div class="page">
+			<div class="page-content">
+				<div class="page-mobile-spacer"></div>
+				<div class="page-title big-text condensed">MUSIC</div>
+				<div class="page-entry">
+					<iframe
+						style="max-width: 100%; height: 420px; border: 0;"
+						src="https://bandcamp.com/EmbeddedPlayer/album=2987950598/size=large/bgcol=141414/linkcol=ffffff/tracklist=false/transparent=true/" 
+						seamless>
+						<a href="https://ellisrgreen.bandcamp.com/album/tadd">Tadd! by Ellis Green</a>
+					</iframe>
+				</div>
+				<div class="page-entry regular-text">
+					<div class="music-title-text">Tadd!</div>
+					<div class="small-text"><i>June 2019</i></div>
+					<br>
+					<div class="regular-text">
+						Ellis' first album, <i>Tadd!</i> is a set of trio interpretations of several pieces written by jazz composer and pianist Tadd Dameron. 
+						It was recorded in fall 2018 by Clarke Rigsby of Tempest Recording.<br><br>
+						<i>Tadd!</i> features Ellis Green on piano, Max Beckman on bass, and Filip Tipei on drums.<br><br>
+						<b>Track list</b> (all tracks composed by Tadd Dameron):<br>
+						1. The Scene is Clean<br>
+						2. Dameronia<br>
+						3. If You Could See Me Now<br>
+						4. Casbah<br>
+						5. Dial 'B' for Beauty<br>
+						6. Our Delight<br>
+					</div>
+				</div>
+				<div class="page-entry">
+					<iframe 
+						style="max-width: 100%; height: 420px;"
+						scrolling="no" 
+						frameborder="no" 
+						allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/992481784&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
+				<div class="page-entry">
+					<div class="music-title-text">Chordless</div>
+					<div class="small-text"><i>October 2019</i></div>
+					<br>
+					<div class="regular-text">
+						Helmed by trumpet player Alex <!-- "The Rat" --> Price, Chordless is a trio devoted to playing straight-ahead jazz without a traditional accompaning instrument (like piano or guitar).
+						This is a set of demos recorded by the group, which illustrate its chord-free approach with performances of a few jazz standards.<br><br>
+						Chordless consists of Alex Price on trumpet, Ellis Green on bass, and Sam Russo on drums.<br><br>
+						<b>Track list</b>:<br>
+						1. I'll Be Seeing You <span class="grey-text">(Sammy Fain/Irving Kahal)</span><br>
+						2. Social Call <span class="grey-text">(Gigi Gryce)</span><br>
+						3. Joy Spring <span class="grey-text">(Clifford Brown)</span><br>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="small-text grey-text">
+					Site design © Ellis Green. All rights reserved.<br>
+					Images courtesy of <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script type="text/javascript" src="scripts/menu.js"></script>
+</html>
