@@ -7,7 +7,7 @@ body {
 	background-color: #141414;
 }
 body, html {
-	height: auto;
+	height: 100%;
 }
 img {
     vertical-align: middle;
@@ -174,7 +174,7 @@ h1 {
 }
 /* Page content */
 .page {
-	min-height: 100vh;
+	min-height: 100%;
 	background-color: #f2f2f2;
 	display: -webkit-box;
 	display: -ms-flexbox;
