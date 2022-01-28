@@ -80,8 +80,7 @@ h1 {
 .sidebar-desktop {
 	float: left;
 	width: 450px;
-	/* Stick to top of browser */ 
-  	position: sticky;
+  	position: fixed;
 	top: 0;
 	/* Hide for mobile */ 
 	height: 0;
