@@ -24,9 +24,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Boogaloo&family=Fredoka+One&family=Henny+Penny&family=Lobster&family=Palette+Mosaic&family=Sevillana&family=Smokum&family=Syne+Tactile&display=swap" rel="stylesheet">
 		<!-- Title -->
-		<title>Ellis Green: Home</title>
+		<title>Ellis Green: Calendar</title>
 	</head>
-	<body style="overflow-y: hidden">
+	<body>
 		<!-- Mobile navbar-->
 		<div class="navbar unselectable" onclick="openMenu();">
 			<div class="navbar-button">≡</div>
@@ -40,52 +40,55 @@
 			</div>
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Home</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='index.html';">Home</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='about.html';">About</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='music.html';">Music</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='video.html';">Video</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='calendar.html';">Calendar</div>
+			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Calendar</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='contact.html';">Contact</div>
 		</div>
 		<!-- Desktop sidebar -->
 		<div class="sidebar sidebar-desktop unselectable">
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Home</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='index.html';">Home</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='about.html';">About</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='music.html';">Music</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='video.html';">Video</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='calendar.html';">Calendar</div>
+			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Calendar</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='contact.html';">Contact</div>
 		</div>
 		<!-- Page content -->
-		<div class="page home-page">
-			<h1>Ellis Green</h1>
-			<div class="name-container">
-				<div class="name">
-					<div class="font">e</div><div class="font">l</div><div class="font">l</div><div class="font">i</div><div class="font">s</div>
+		<div class="page">
+			<h1>Calendar</h1>
+			<div class="page-content">
+				<div class="page-title">
+					<div class="font">c</div><div class="font">a</div><div class="font">l</div><div class="font">e</div><div class="font">n</div><div class="font">d</div><div class="font">a</div><div class="font">r</div>
 				</div>
-				<div class="name">
-					<div class="font">g</div><div class="font">r</div><div class="font">e</div><div class="font">e</div><div class="font">n</div>
-				</div>
-				<div class="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
+				<div class="page-title-spacer"></div>
+				<div class="calendar-entry">
+					<iframe
+						class="calendar calendar-mobile"
+						src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2f2f2&ctz=America%2FPhoenix&showTitle=0&showNav=1&mode=AGENDA&showPrint=0&showDate=1&showTabs=0&showTz=0&showCalendars=0&src=MGZuN3Rqb2R2YWNjZ3Bva29uNnZzbzI5NmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237CB342" 
+						frameborder="0" 
+						scrolling="no">
+					</iframe>
+					<iframe 
+						class="calendar calendar-desktop"
+						src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2f2f2&ctz=America%2FPhoenix&showTitle=0&showNav=1&mode=MONTH&showPrint=0&showDate=1&showTabs=1&showTz=0&src=MGZuN3Rqb2R2YWNjZ3Bva29uNnZzbzI5NmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237CB342" 
+						frameborder="0" 
+						scrolling="no">
+					</iframe>
+				</div>	
 			</div>
-			<!-- <div class="home-page-header unselectable">
-				<div class="home-page-header-title">ELLIS<br>GREEN</div>
-				<div class="home-page-header-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
-			</div> -->
-			<!-- <div class="footer footer-home small-text">
-				Site design © Ellis Green. All rights reserved. | 
-				Images courtesy of <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
-			</div> -->
+			<footer>
+				<div class="small-text grey-text">
+					Site design © Ellis Green. All rights reserved.<br>
+					Images courtesy of <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
+				</div>
+			</footer>
 		</div>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/textify.js"></script>
-		<script type="text/javascript">
-			if(max_margin !== null) {
-				max_margin = 20;
-			}
-			let timer = setInterval(textify, 1300);
-		</script>
-	</body>	
+	</body>
 </html>

@@ -22,9 +22,7 @@
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Boogaloo&family=Fredoka+One&family=Henny+Penny&family=Lobster&family=Palette+Mosaic&family=Sevillana&family=Smokum&family=Syne+Tactile&display=swap" rel="stylesheet">
 		<!-- Title -->
 		<title>Ellis Green: Music</title>
 	</head>
@@ -46,6 +44,7 @@
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='about.html';">About</div>
 			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Music</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='video.html';">Video</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='calendar.html';">Calendar</div>
 			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='contact.html';">Contact</div>
 		</div>
 		<!-- Desktop sidebar -->
@@ -56,13 +55,16 @@
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='about.html';">About</div>
 			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Music</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='video.html';">Video</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='calendar.html';">Calendar</div>
 			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='contact.html';">Contact</div>
 		</div>
 		<!-- Page content -->
 		<div class="page">
 			<h1>Music</h1>
 			<div class="page-content">
-				<div class="page-title big-text condensed">Music</div>
+				<div class="page-title">
+					<div class="font">m</div><div class="font">u</div><div class="font">s</div><div class="font">i</div><div class="font">c</div>
+				</div>
 				<div class="page-title-spacer"></div>
 				<div class="page-entry">
 					<iframe
@@ -89,6 +91,7 @@
 						6. Our Delight<br>
 					</div>
 				</div>
+				<!--
 				<div class="page-entry">
 					<iframe 
 						style="max-width: 100%; height: 420px;"
@@ -103,7 +106,7 @@
 					<div class="small-text"><i>October 2019</i></div>
 					<br>
 					<div class="regular-text">
-						Helmed by trumpet player Alex <!-- "The Rat" --> Price, Chordless is a trio devoted to playing straight-ahead jazz without a traditional accompaning instrument (like piano or guitar).
+						Helmed by trumpet player Alex "The Rat" Price, Chordless is a trio devoted to playing straight-ahead jazz without a traditional accompaning instrument (like piano or guitar).
 						This is a set of demos recorded by the group, which illustrate its chord-free approach with performances of a few jazz standards.<br><br>
 						Chordless consists of Alex Price on trumpet, Ellis Green on bass, and Sam Russo on drums.<br><br>
 						<b>Track list</b>:<br>
@@ -112,6 +115,7 @@
 						3. Joy Spring <span class="grey-text">(Clifford Brown)</span><br>
 					</div>
 				</div>
+				-->
 			</div>
 			<footer>
 				<div class="small-text grey-text">
@@ -120,6 +124,7 @@
 				</div>
 			</footer>
 		</div>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/textify.js"></script>
 	</body>
-	<script type="text/javascript" src="scripts/menu.js"></script>
 </html>
