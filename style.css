@@ -53,10 +53,6 @@ h1 {
 	-o-transition: background-color .15s;
 	transition: background-color .15s;
 }
-.navbar-button:hover {
-	cursor: pointer;
-	background-color: lightgrey;
-}
 /* Sidebar */
 .sidebar {
 	background-color: white;
@@ -117,17 +113,10 @@ h1 {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.sidebar-link:hover {
-	background-color: #e6e6e6;
-	cursor: pointer;
-}
 .sidebar-link-active {
 	color: white;
 	font-weight: 700;
 	background-color: #008000;
-}
-.sidebar-link-active:hover {
-	background-color: #006600;
 }
 .sidebar-close-button-container {
 	position: relative;
@@ -149,10 +138,6 @@ h1 {
 	-o-transition: background-color .15s;
 	transition: background-color .15s;
 }
-.sidebar-close-button:hover {
-	cursor: pointer;
-	background-color: lightgrey;
-}	
 .overlay {
 	/* Cover screen */
 	position: fixed;
@@ -462,5 +447,23 @@ footer a {
 	}
 	.calendar-mobile {
 		display: none;
+	}
+}
+/* Hover magic */
+@media (hover: hover) and (pointer: fine) {
+	.navbar-button:hover {
+		cursor: pointer;
+		background-color: lightgrey;
+	}
+	.sidebar-link:hover {
+		background-color: #e6e6e6;
+		cursor: pointer;
+	}
+	.sidebar-link-active:hover {
+		background-color: #006600;
+	}
+	.sidebar-close-button:hover {
+		cursor: pointer;
+		background-color: lightgrey;
 	}
 }
