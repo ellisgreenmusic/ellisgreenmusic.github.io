@@ -46,7 +46,7 @@ sidebar.addEventListener("touchmove", e => {
 sidebar.addEventListener("touchend", e => {	
 	let distanceX = e.changedTouches[0].screenX - maximumX;
 	let distanceY = e.changedTouches[0].screenY - maximumY;
-	if(goingLeft === true && distanceX < -10 && Math.abs(distanceX) > Math.abs(distanceY)) {
+	if(goingLeft === true && distanceX < -50 && Math.abs(distanceX) > Math.abs(distanceY)) {
 		closeMenu();
 	} else {
 		sidebar.classList.remove("transitionless");
