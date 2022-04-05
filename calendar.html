@@ -62,7 +62,7 @@
 		<div class="page">
 			<h1>Calendar</h1>
 			<div class="page-content">
-				<div class="page-title unselectable">
+				<div class="page-title unselectable" onclick="increment();">
 					<div class="font">c</div><div class="font">a</div><div class="font">l</div><div class="font">e</div><div class="font">n</div><div class="font">d</div><div class="font">a</div><div class="font">r</div>
 				</div>
 				<div class="page-title-spacer"></div>
@@ -90,5 +90,14 @@
 		</div>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/textify.js"></script>
+		<script type="text/javascript">
+			let count = 0;
+			function increment() {
+				count++;
+				if(count === 10) {
+					location.href='tetris.html';
+				}
+			}
+		</script>
 	</body>
 </html>
