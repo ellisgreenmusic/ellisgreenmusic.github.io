@@ -1,3 +1,4 @@
+let indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let styles = [
 	"font-family: 'Abril Fatface', cursive;",
 	"font-family: 'Alfa Slab One', cursive;",
@@ -10,21 +11,12 @@ let styles = [
 	"font-family: 'Smokum', cursive;",
 	"font-family: 'Syne Tactile', cursive;"
 ];
-function shuffle() {
-	for(let i = styles.length - 1; i > 0; i--) {
-		//durstenfeld shuffle
-		let j = Math.floor(Math.random() * (i + 1));
-		let temp = styles[i];
-		styles[i] = styles[j];
-		styles[j] = temp;
-	}
-}
 let fonts = document.getElementsByClassName("font");
-let max_margin = 8;
+let max_margin = 0;
 function textify() {
-	shuffle();
+	shuffle(indices);
 	for(let i = 0; i < fonts.length; i++) {
-		fonts[i].style = styles[i] + " margin-top: " + Math.floor(Math.random() * max_margin) + "px;"
+		fonts[i].style = styles[indices[i]] + " animation-delay: " + (indices[i] * -1/4) + "s;";
 	}
 }
 textify();

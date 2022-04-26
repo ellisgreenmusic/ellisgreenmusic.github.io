@@ -63,12 +63,12 @@
 			<h1>Ellis Green</h1>
 			<div class="name-container unselectable">
 				<div class="name">
-					<div class="font">e</div><div class="font">l</div><div class="font">l</div><div class="font">i</div><div class="font">s</div>
+					<div class="font font-hidden">e</div><div class="font font-hidden">l</div><div class="font font-hidden">l</div><div class="font font-hidden">i</div><div class="font font-hidden">s</div>
 				</div>
 				<div class="name">
-					<div class="font">g</div><div class="font">r</div><div class="font">e</div><div class="font">e</div><div class="font">n</div>
+					<div class="font font-hidden">g</div><div class="font font-hidden">r</div><div class="font font-hidden">e</div><div class="font font-hidden">e</div><div class="font font-hidden">n</div>
 				</div>
-				<div class="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
+				<div class="name-subtitle" id="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
 			</div>
 			<!-- <div class="home-page-header unselectable">
 				<div class="home-page-header-title">ELLIS<br>GREEN</div>
@@ -80,12 +80,43 @@
 			</div> -->
 		</div>
 		<script type="text/javascript" src="scripts/menu.js"></script>
-		<script type="text/javascript" src="scripts/textify.js"></script>
+		<script type="text/javascript" src="scripts/shuffle.js"></script>
 		<script type="text/javascript">
-			if(max_margin !== null) {
-				max_margin = 20;
+			let indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+			let styles = [
+				"font-family: 'Abril Fatface', cursive;",
+				"font-family: 'Alfa Slab One', cursive;",
+				"font-family: 'Boogaloo', cursive;",
+				"font-family: 'Fredoka One', cursive;",
+				"font-family: 'Henny Penny', cursive;",
+				"font-family: 'Lobster', cursive;",
+				"font-family: 'Palette Mosaic', cursive;",
+				"font-family: 'Sevillana', cursive;",
+				"font-family: 'Smokum', cursive;",
+				"font-family: 'Syne Tactile', cursive;"
+			];
+			let fonts = document.getElementsByClassName("font");
+			function textify() {
+				shuffle(indices);
+				for(let i = 0; i < fonts.length; i++) {
+					fonts[i].style = styles[indices[i]] + " margin-top: " + Math.floor(Math.random() * 20) + "px;";
+				}
 			}
-			let timer = setInterval(textify, 1300);
+			textify();
+			
+			setTimeout(() => {
+				for(let i = 0; i < 10; i++) {
+					setTimeout(() => {
+						fonts[indices[i]].classList.remove("font-hidden");
+					}, 25*i);
+				}
+				setTimeout(() => {
+					document.getElementById("name-subtitle").style.opacity = "1";
+				}, 750);
+			}, 500);
+			setTimeout(() => {
+				setInterval(textify, 1300);
+			}, 1800);
 		</script>
 	</body>	
 </html>
