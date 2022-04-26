@@ -300,6 +300,7 @@ h1 {
 	100% { 	margin-top: 0; 		}
 }
 .name-subtitle {
+	visibility: hidden;
 	opacity: 0;
 	color: white;
 	font-family: 'Roboto Condensed', sans-serif;
