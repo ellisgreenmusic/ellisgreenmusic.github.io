@@ -63,10 +63,18 @@
 			<h1>Ellis Green</h1>
 			<div class="name-container unselectable">
 				<div class="name">
-					<div class="font font-hidden">e</div><div class="font font-hidden">l</div><div class="font font-hidden">l</div><div class="font font-hidden">i</div><div class="font font-hidden">s</div>
+					<div class="font-hidden font">e</div>
+					<div class="font-hidden font">l</div>
+					<div class="font-hidden font">l</div>
+					<div class="font-hidden font">i</div>
+					<div class="font-hidden font">s</div>
 				</div>
 				<div class="name">
-					<div class="font font-hidden">g</div><div class="font font-hidden">r</div><div class="font font-hidden">e</div><div class="font font-hidden">e</div><div class="font font-hidden">n</div>
+					<div class="font-hidden font">g</div>
+					<div class="font-hidden font">r</div>
+					<div class="font-hidden font">e</div>
+					<div class="font-hidden font">e</div>
+					<div class="font-hidden font">n</div>
 				</div>
 				<div class="name-subtitle" id="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
 			</div>
@@ -84,22 +92,24 @@
 		<script type="text/javascript">
 			let indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 			let styles = [
-				"font-family: 'Abril Fatface', cursive;",
-				"font-family: 'Alfa Slab One', cursive;",
-				"font-family: 'Boogaloo', cursive;",
-				"font-family: 'Fredoka One', cursive;",
-				"font-family: 'Henny Penny', cursive;",
-				"font-family: 'Lobster', cursive;",
-				"font-family: 'Palette Mosaic', cursive;",
-				"font-family: 'Sevillana', cursive;",
-				"font-family: 'Smokum', cursive;",
-				"font-family: 'Syne Tactile', cursive;"
+				"'Abril Fatface', sans-serif",
+				"'Alfa Slab One', sans-serif",
+				"'Boogaloo', sans-serif",
+				"'Fredoka One', sans-serif",
+				"'Henny Penny', sans-serif",
+				"'Lobster', sans-serif",
+				"'Palette Mosaic', sans-serif",
+				"'Sevillana', sans-serif",
+				"'Smokum', sans-serif",
+				"'Syne Tactile', sans-serif"
 			];
 			let fonts = document.getElementsByClassName("font");
+			let subtitle = document.getElementById("name-subtitle");
 			function textify() {
 				shuffle(indices);
-				for(let i = 0; i < fonts.length; i++) {
-					fonts[i].style = styles[indices[i]] + " margin-top: " + Math.floor(Math.random() * 20) + "px;";
+				for(let i = 0; i < 10; i++) {
+					fonts[i].style.fontFamily = styles[indices[i]];
+					fonts[i].style.marginTop = Math.floor(Math.random() * 20) + "px";
 				}
 			}
 			textify();
@@ -111,7 +121,7 @@
 					}, 25*i);
 				}
 				setTimeout(() => {
-					document.getElementById("name-subtitle").style.opacity = "1";
+					subtitle.style.opacity = "1";
 				}, 750);
 			}, 500);
 			setTimeout(() => {

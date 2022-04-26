@@ -80,7 +80,7 @@ h1 {
 }
 .sidebar-desktop {
 	float: left;
-	width: 450px;
+	width: 400px;
   	position: fixed;
 	top: 0;
 	/* Hide for mobile */ 
@@ -299,12 +299,12 @@ h1 {
 	100% { 	margin-top: 0; 		}
 }
 .name-subtitle {
+	opacity: 0;
 	color: white;
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 100%;
 	text-align: center;
 	text-shadow: 0 2px 2px #000000;
-	opacity: 0;
 	-webkit-transition: opacity .75s;
 	-o-transition: opacity .75s;
 	transition: opacity .75s;
@@ -452,7 +452,7 @@ footer a {
 		height: 100vh;
 	}
 	.page {
-		margin-left: 450px;
+		margin-left: 400px;
 	}
 	.page-title {
 		font-size: 60pt;
