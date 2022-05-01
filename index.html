@@ -24,9 +24,10 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Boogaloo&family=Fredoka+One&family=Henny+Penny&family=Lobster&family=Palette+Mosaic&family=Sevillana&family=Smokum&family=Syne+Tactile&display=swap" rel="stylesheet">
 		<!-- Title -->
-		<title>Ellis Green: Home</title>
+		<title>Ellis Green Music</title>
 	</head>
-	<body style="overflow-y: hidden">
+	<body onload="loaded()">
+		<h1>Ellis Green Music</h1>
 		<!-- Mobile navbar-->
 		<div class="navbar unselectable" onclick="openMenu();">
 			<div class="navbar-button">≡</div>
@@ -40,94 +41,220 @@
 			</div>
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu();">Home</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='about.html';">About</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='music.html';">Music</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='video.html';">Video</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='calendar.html';">Calendar</div>
-			<div class="sidebar-link sidebar-link-mobile" onclick="location.href='contact.html';">Contact</div>
+			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); transition(0)">Home</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(1)">About</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(2)">Music</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(3)">Video</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(4)">Calendar</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(5)">Contact</div>
+			<div class="sidebar-footer small-text">
+				Site design © Ellis Green. All rights reserved.<br>
+				Photos by <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
+			</div>
 		</div>
 		<!-- Desktop sidebar -->
 		<div class="sidebar sidebar-desktop unselectable">
 			<div class="sidebar-logo big-text condensed">Ellis Green</div>
 			<div class="sidebar-text regular-text">A jazz bass player from Phoenix, Arizona.</div>
-			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="window.scroll({ top: 0, left: 0, behavior: 'smooth' });">Home</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='about.html';">About</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='music.html';">Music</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='video.html';">Video</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='calendar.html';">Calendar</div>
-			<div class="sidebar-link sidebar-link-desktop" onclick="location.href='contact.html';">Contact</div>
+			<div class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="transition(0)">Home</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="transition(1)">About</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="transition(2)">Music</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="transition(3)">Video</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="transition(4)">Calendar</div>
+			<div class="sidebar-link sidebar-link-desktop" onclick="transition(5)">Contact</div>
+			<div class="sidebar-footer small-text">
+				Site design © Ellis Green. All rights reserved.<br>
+				Photos by <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
+			</div>
 		</div>
 		<!-- Page content -->
-		<div class="page home-page">
-			<h1>Ellis Green</h1>
-			<div class="name-container unselectable">
-				<div class="name">
-					<div class="font-hidden font">e</div>
-					<div class="font-hidden font">l</div>
-					<div class="font-hidden font">l</div>
-					<div class="font-hidden font">i</div>
-					<div class="font-hidden font">s</div>
+		<div class="page">
+			<!-- Home -->
+			<div class="page-section home-page page-section-active">
+				<div class="name-container unselectable">
+					<div class="name">
+						<div class="font-hidden font name-letters">e</div>
+						<div class="font-hidden font name-letters">l</div>
+						<div class="font-hidden font name-letters">l</div>
+						<div class="font-hidden font name-letters">i</div>
+						<div class="font-hidden font name-letters">s</div>
+					</div>
+					<div class="name">
+						<div class="font-hidden font name-letters">g</div>
+						<div class="font-hidden font name-letters">r</div>
+						<div class="font-hidden font name-letters">e</div>
+						<div class="font-hidden font name-letters">e</div>
+						<div class="font-hidden font name-letters">n</div>
+					</div>
+					<div class="name-subtitle" id="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
 				</div>
-				<div class="name">
-					<div class="font-hidden font">g</div>
-					<div class="font-hidden font">r</div>
-					<div class="font-hidden font">e</div>
-					<div class="font-hidden font">e</div>
-					<div class="font-hidden font">n</div>
-				</div>
-				<div class="name-subtitle" id="name-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
 			</div>
-			<!-- <div class="home-page-header unselectable">
-				<div class="home-page-header-title">ELLIS<br>GREEN</div>
-				<div class="home-page-header-subtitle">JAZZ BASS &bull; PHOENIX, AZ</div>
-			</div> -->
-			<!-- <div class="footer footer-home small-text">
-				Site design © Ellis Green. All rights reserved. | 
-				Images courtesy of <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
-			</div> -->
+			<!-- About -->
+			<div class="page-section">
+				<div class="page-content">
+					<div class="page-title unselectable" onclick="textify(this)">
+						<div class="font font-animated">a</div>
+						<div class="font font-animated">b</div>
+						<div class="font font-animated">o</div>
+						<div class="font font-animated">u</div>
+						<div class="font font-animated">t</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="page-entry regular-text">
+						Ellis Green is a jazz bass player from Phoenix, Arizona.
+						During his time with the Jazz Studies program at Arizona State University, he had the opportunity to study with pianist Michael Kocour.
+						<br><br>
+						Ellis has played at several venues around the Valley, including The Nash, the premier jazz club in the Phoenix area. 
+						He has performed with artists including Bruce Forman, Michael Kocour, and Lewis Nash.
+					</div>
+					<div class="page-entry">
+						<img class="page-image" src="images/about-image.png" alt="">
+						<div class="page-image-caption small-text grey-text">Ellis in September 2019 - Photo by Bill Goodman</div>
+					</div>
+				</div>
+			</div>
+			<!-- Music -->
+			<div class="page-section">
+				<div class="page-content">
+					<div class="page-title unselectable" onclick="textify(this)">
+						<div class="font font-animated">m</div>
+						<div class="font font-animated">u</div>
+						<div class="font font-animated">s</div>
+						<div class="font font-animated">i</div>
+						<div class="font font-animated">c</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="page-entry">
+						<iframe
+							style="max-width: 100%; height: 420px; border: 0;"
+							src="https://bandcamp.com/EmbeddedPlayer/album=2987950598/size=large/bgcol=141414/linkcol=ffffff/tracklist=false/transparent=true/" 
+							seamless>
+							<a href="https://ellisrgreen.bandcamp.com/album/tadd">Tadd! by Ellis Green</a>
+						</iframe>
+					</div>
+					<div class="page-entry">
+						<div class="music-title-text">Tadd!</div>
+						<div class="small-text"><i>June 2019</i></div>
+						<br>
+						<div class="regular-text">
+							<i>Tadd!</i> features trio interpretations of music written by composer and pianist Tadd Dameron. 
+							It was recorded in the fall of 2018 by Clarke Rigsby of Tempest Recording.<br><br>
+							<i>Tadd!</i> features Ellis Green on piano, Max Beckman on bass, and Filip Tipei on drums.<br><br>
+							<b>Track list</b> (all tracks composed by Tadd Dameron):<br>
+							<table>
+								<tr><td>1.</td><td>The Scene is Clean</td></tr>
+								<tr><td>2.</td><td>Dameronia</td></tr>
+								<tr><td>3.</td><td>If You Could See Me Now</td></tr>
+								<tr><td>4.</td><td>Casbah</td></tr>
+								<tr><td>5.</td><td>Dial 'B' for Beauty</td></tr>
+								<tr><td>6.</td><td>Our Delight</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Video -->
+			<div class="page-section">
+				<div class="page-content">
+					<div class="page-title unselectable" onclick="textify(this)">
+						<div class="font font-animated">v</div>
+						<div class="font font-animated">i</div>
+						<div class="font font-animated">d</div>
+						<div class="font font-animated">e</div>
+						<div class="font font-animated">o</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="video-entry">
+						<div class="video-container">
+							<iframe 
+								class="video"
+								src="https://www.youtube.com/embed/4h_ME_INNvw"
+								title="YouTube- They Can't Take That Away From Me" 
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+							</iframe>
+						</div>
+					</div>		
+					<div class="video-entry">
+						<div class="video-container">
+							<iframe 
+								class="video"
+								src="https://www.youtube.com/embed/UZ4GQfCRIFk"
+								title="YouTube- The Fruit" 
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Calendar -->
+			<div class="page-section">
+				<div class="page-content">
+					<div class="page-title unselectable" onclick="textify(this)">
+						<div class="font font-animated">c</div>
+						<div class="font font-animated">a</div>
+						<div class="font font-animated">l</div>
+						<div class="font font-animated">e</div>
+						<div class="font font-animated">n</div>
+						<div class="font font-animated">d</div>
+						<div class="font font-animated">a</div>
+						<div class="font font-animated">r</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="calendar-entry">
+						<iframe
+							class="calendar calendar-mobile"
+							src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2f2f2&ctz=America%2FPhoenix&showTitle=0&showNav=1&mode=AGENDA&showPrint=0&showDate=1&showTabs=0&showTz=0&showCalendars=0&src=MGZuN3Rqb2R2YWNjZ3Bva29uNnZzbzI5NmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237CB342" 
+							frameborder="0" 
+							scrolling="no">
+						</iframe>
+						<iframe 
+							class="calendar calendar-desktop"
+							src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2f2f2&ctz=America%2FPhoenix&showTitle=0&showNav=1&mode=MONTH&showPrint=0&showDate=1&showTabs=1&showTz=0&src=MGZuN3Rqb2R2YWNjZ3Bva29uNnZzbzI5NmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237CB342" 
+							frameborder="0" 
+							scrolling="no">
+						</iframe>
+					</div>	
+				</div>
+			</div>
+			<!-- Contact -->
+			<div class="page-section">
+				<img class="big-image" style="height: 50vh;" src="images/contact-banner.png" alt="Photo of Ellis in August 2021 by Joseph Berg (facebook.com/fotosbill)" />
+				<div class="page-content" style="margin-top: 40px;">
+					<div class="page-title unselectable" onclick="textify(this)">
+						<div class="font font-animated">c</div>
+						<div class="font font-animated">o</div>
+						<div class="font font-animated">n</div>
+						<div class="font font-animated">t</div>
+						<div class="font font-animated">a</div>
+						<div class="font font-animated">c</div>
+						<div class="font font-animated">t</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="page-entry">
+						<div class="small-text"><b>PHONE</b></div>
+						<div class="contact-text">(602) 770-0329</div>
+					</div>
+					<div class="page-entry">
+						<div class="small-text"><b>EMAIL</b> <span class="grey-text">(PREFERRED)</span></div>
+						<div class="contact-text">ellis.r.green@gmail.com</div>
+					</div>
+					<br>
+					<i class="small-text grey-text" style="padding-bottom: 20px; width: 100%; text-align: center">Comments and questions are welcome!</i>
+				</div>
+			</div>
 		</div>
+		<div class="loading-screen" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
+		</div>
+		<script type="text/javascript" src="scripts/loaded.js"></script>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/shuffle.js"></script>
-		<script type="text/javascript">
-			let indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-			let styles = [
-				"'Abril Fatface', sans-serif",
-				"'Alfa Slab One', sans-serif",
-				"'Boogaloo', sans-serif",
-				"'Fredoka One', sans-serif",
-				"'Henny Penny', sans-serif",
-				"'Lobster', sans-serif",
-				"'Palette Mosaic', sans-serif",
-				"'Sevillana', sans-serif",
-				"'Smokum', sans-serif",
-				"'Syne Tactile', sans-serif"
-			];
-			let fonts = document.getElementsByClassName("font");
-			let subtitle = document.getElementById("name-subtitle");
-			function textify() {
-				shuffle(indices);
-				for(let i = 0; i < 10; i++) {
-					fonts[i].style.fontFamily = styles[indices[i]];
-					fonts[i].style.marginTop = Math.floor(Math.random() * 20) + "px";
-				}
-			}
-			textify();
-			
-			setTimeout(() => {
-				for(let i = 0; i < 10; i++) {
-					setTimeout(() => {
-						fonts[indices[i]].classList.remove("font-hidden");
-					}, 25*i);
-				}
-				setTimeout(() => {
-					subtitle.style.visibility = "visible";
-					subtitle.style.opacity = "1";
-				}, 750);
-			}, 500);
-			setTimeout(() => {
-				setInterval(textify, 1300);
-			}, 1800);
-		</script>
+		<script type="text/javascript" src="scripts/textify.js"></script>
+		<script type="text/javascript" src="scripts/transition.js"></script>
 	</body>	
 </html>
