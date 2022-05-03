@@ -1,10 +1,13 @@
 let overlay = document.getElementById("overlay");
 let sidebar = document.getElementById("sidebar-mobile");
+let body = document.body;
 function openMenu() {
+	body.style.overflowY = "hidden";
 	overlay.classList.add("overlay-visible");
 	sidebar.style.left = "0";
 }
 function closeMenu() {
+	body.style.overflowY = "auto";
 	overlay.classList.remove("overlay-visible");
 	sidebar.classList.remove("transitionless");
 	sidebar.style.left = "-90%";
