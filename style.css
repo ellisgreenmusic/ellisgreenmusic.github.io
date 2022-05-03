@@ -17,6 +17,11 @@ img {
 	    -ms-user-select: none;
 	        user-select: none;
 }
+.transitionless {
+	-webkit-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
 .condensed {
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -55,7 +60,7 @@ h1 {
 /* Sidebar */
 .sidebar {
 	background-color: white;
-	height: 100vh;
+	height: 100%;
 	-webkit-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .1);
 	        box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .1);
 	overflow-y: auto;
@@ -78,11 +83,6 @@ h1 {
 	top: 0;
 	width: 85%;
 	left: -90%;
-}
-.transitionless {
-	-webkit-transition: none !important;
-	-o-transition: none !important;
-	transition: none !important;
 }
 .sidebar-desktop {
 	float: left;
