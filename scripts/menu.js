@@ -11,6 +11,11 @@ function closeMenu() {
 	overlay.classList.remove("overlay-visible");
 	sidebar.classList.remove("transitionless");
 	sidebar.style.left = "-90%";
+	window.scroll({
+		top: 0,
+		left: 0,
+		behavior: "smooth"
+	});
 }
 //Swiping!
 let maximumX;
