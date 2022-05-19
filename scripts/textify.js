@@ -32,7 +32,7 @@ function animateName() {
 		setTimeout(() => {
 			subtitle.style.visibility = "visible";
 			subtitle.style.opacity = "1";
-		}, 750);
+		}, 500);
 	}, 500);
 	setTimeout(() => {
 		setInterval(textifyName, 1300);
@@ -42,7 +42,7 @@ function animateName() {
 function textify(title) {
 	shuffle(indices);
 	for(let i = 0; i < title.children.length; i++) {
-		title.children[i].style = "font-family: " + styles[indices[i]] + "; animation-delay: " + (indices[i] * -1/4) + "s;";
+		title.children[i].style = "font-family: " + styles[indices[i]] + "; animation-delay: " + (indices[i] * -.1) + "s;";
 	}
 }
 
