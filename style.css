@@ -112,6 +112,8 @@ a {
 	padding-right: 30px;
 }
 .sidebar-link {
+	color: black;
+	text-decoration: none;
 	font-weight: 300;
 	padding-left: 30px;
 	padding-right: 30px;
