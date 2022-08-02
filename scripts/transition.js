@@ -3,6 +3,27 @@ let linksMobile = document.getElementsByClassName("sidebar-link-mobile");
 let linksDesktop = document.getElementsByClassName("sidebar-link-desktop");
 let current = 0;
 let semaphore = false;
+
+//for reloading page
+let anchor = window.location.hash;
+if(anchor === "#home" || anchor === "") {
+	current = 0;
+} else if(anchor === "#about") {
+	current = 1;
+} else if(anchor === "#music") {
+	current = 2;
+} else if(anchor === "#video") {
+	current = 3;
+} else if(anchor === "#calendar") {
+	current = 4;
+} else if(anchor === "#contact") {
+	current = 5;
+}
+sections[current].classList.add("page-section-active");
+linksMobile[current].classList.add("sidebar-link-active");
+linksDesktop[current].classList.add("sidebar-link-active");
+sections[current].classList.add("page-section-active");
+
 function transition(index) {
 	if(current === index || semaphore === true) {
 		return;
