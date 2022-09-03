@@ -22,7 +22,6 @@ if(anchor === "#home" || anchor === "") {
 sections[current].classList.add("page-section-active");
 linksMobile[current].classList.add("sidebar-link-active");
 linksDesktop[current].classList.add("sidebar-link-active");
-sections[current].classList.add("page-section-active");
 
 function transition(index) {
 	if(current === index || semaphore === true) {
