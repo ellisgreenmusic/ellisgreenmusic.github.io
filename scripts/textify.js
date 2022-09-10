@@ -46,7 +46,7 @@ function textify(title) {
 	}
 }
 
-let titles = document.getElementsByClassName("page-title");
+let titles = document.getElementsByClassName("page-title-text");
 for(let i = 0; i < titles.length; i++) {
 	textify(titles[i]);
 }
