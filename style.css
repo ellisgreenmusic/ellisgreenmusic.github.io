@@ -248,23 +248,31 @@ a {
 	margin-bottom: 20px;
 }
 .page-title {
-	width: 350px;
+	width: 780px;
 	max-width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #008000;
 	font-size: 50pt;
 	height: 75pt;
+}
+.page-title-text {
+	width: -webkit-min-content;
+	width: -moz-min-content;
+	width: min-content;
 	/* For aligning letters */
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
+	display: flex;	
 }
-/* For positioning page title */
+/* For positioning page title
 .page-title-spacer {
-	width: 390px;
+	background-color: blue;
+	width: 10000px;
 	max-width: 100%;
+	min-height: 30px;
 }
+ */
 .page-entry {
 	width: 350px;
 	max-width: 100%;
