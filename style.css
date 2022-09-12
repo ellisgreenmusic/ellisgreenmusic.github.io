@@ -248,7 +248,7 @@ a {
 	margin-bottom: 20px;
 }
 .page-title {
-	width: 780px;
+	width: 350px;
 	max-width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -265,14 +265,12 @@ a {
 	display: -ms-flexbox;
 	display: flex;	
 }
-/* For positioning page title
+/* For positioning page title */
 .page-title-spacer {
-	background-color: blue;
-	width: 10000px;
+	height: 0;
+	width: 390px;
 	max-width: 100%;
-	min-height: 30px;
 }
- */
 .page-entry {
 	width: 350px;
 	max-width: 100%;
