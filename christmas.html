@@ -97,12 +97,18 @@
 			<div class="loading-circle"></div>
 			<div class="loading-circle" style="animation-delay: -.15s"></div>
 		</div>
-		<script type="text/javascript" src="scripts/loaded.js"></script>
 		<script type="text/javascript" src="scripts/shuffle.js"></script>
 		<script type="text/javascript">
+			let loadingScreen = document.getElementById("loading-screen");
+			function loaded() {
+				loadingScreen.style.opacity = 0;
+				setTimeout(() => {
+					loadingScreen.style.display = "none";
+				}, 400);
+			}
+			
 			let indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 			let letters = document.getElementsByClassName("title-letter");
-
 			function spinLetters() {
 				shuffle(indices);
 				for(let i = 0; i < letters.length; i++) {
