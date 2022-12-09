@@ -292,9 +292,6 @@ a {
 	font-style: italic;
 	text-align: center;
 }
-.album-art:hover {
-	cursor: pointer;
-}
 .name-container {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -383,6 +380,9 @@ a {
 	font-size: 20pt;
 	line-height: 120%;
 }
+.tracklist-table td {
+	vertical-align: top;
+}
 .contact-text {
 	width: -webkit-min-content;
 	width: -moz-min-content;
@@ -468,6 +468,10 @@ a {
 .calendar-mobile {
 	max-height: 65vh;
 	display: block;
+}
+/* Font Awesome */
+.fa {
+	color: #008000;
 }
 /* Loading */
 .loading-screen {
