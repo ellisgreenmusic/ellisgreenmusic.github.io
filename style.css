@@ -276,6 +276,11 @@ a {
 	max-width: 100%;
 	padding: 20px;
 }
+.page-entry-full {
+	width: 740px;
+	max-width: 100%;
+	padding: 20px;
+}
 .page-image-entry {
 	text-align: center;
 }
@@ -334,20 +339,6 @@ a {
 	-webkit-transform: scale(0);
 	    -ms-transform: scale(0);
 	        transform: scale(0);
-}
-.font-animated {
-	-webkit-animation: font-bounce 1s infinite;
-	        animation: font-bounce 1s infinite;
-}
-@-webkit-keyframes font-bounce {
-	0% { 	margin-top: 0; 		}
-	50% { 	margin-top: 10px; 	}
-	100% { 	margin-top: 0; 		}
-}
-@keyframes font-bounce {
-	0% { 	margin-top: 0; 		}
-	50% { 	margin-top: 10px; 	}
-	100% { 	margin-top: 0; 		}
 }
 .name-subtitle {
 	visibility: hidden;
@@ -439,11 +430,6 @@ a {
 	background-color: #141414;
 }
 /* Youtube embeds (16x9) */
-.video-entry, .calendar-entry {
-	width: 740px;
-	max-width: 100%;
-	padding: 20px;
-}
 .video-container {
 	position: relative;
     width: 100%;

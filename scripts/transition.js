@@ -8,16 +8,21 @@ let semaphore = false;
 let anchor = window.location.hash;
 if(anchor === "#home" || anchor === "") {
 	current = 0;
-} else if(anchor === "#about") {
-	current = 1;
-} else if(anchor === "#music") {
-	current = 2;
-} else if(anchor === "#video") {
-	current = 3;
-} else if(anchor === "#calendar") {
-	current = 4;
-} else if(anchor === "#contact") {
-	current = 5;
+} else {
+	if(anchor === "#about") {
+		current = 1;
+	} else if(anchor === "#music") {
+		current = 2;
+	} else if(anchor === "#video") {
+		current = 3;
+	} else if(anchor === "#calendar") {
+		current = 4;
+	} else if(anchor === "#reviews") {
+		current = 5;
+	} else if(anchor === "#contact") {
+		current = 6;
+	}
+	textifyTitle(current);
 }
 sections[current].classList.add("page-section-active");
 linksMobile[current].classList.add("sidebar-link-active");
@@ -39,8 +44,13 @@ function transition(index) {
 		}
 	}
 	
+	if(index !== 0) {
+		textifyTitle(index);
+	}
+	
 	sections[current].classList.remove("page-section-active");
 	sections[index].classList.add("page-section-active");
+	window.scrollTo({top: 0});
 	semaphore = true;
 	setTimeout(() => {
 		current = index;

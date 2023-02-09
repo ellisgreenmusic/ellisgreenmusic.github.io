@@ -48,7 +48,8 @@
 			<a href="#music" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(2)">Music</a>
 			<a href="#video" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(3)">Video</a>
 			<a href="#calendar" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(4)">Calendar</a>
-			<a href="#contact" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(5)">Contact</a>
+			<a href="#reviews" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(5)">Reviews</a>
+			<a href="#contact" class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(6)">Contact</a>
 			<div class="sidebar-footer small-text">
 				Site design © Ellis Green. All rights reserved.<br>
 				Photos by <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
@@ -63,7 +64,8 @@
 			<a href="#music" class="sidebar-link sidebar-link-desktop" onclick="transition(2)">Music</a>
 			<a href="#video" class="sidebar-link sidebar-link-desktop" onclick="transition(3)">Video</a>
 			<a href="#calendar" class="sidebar-link sidebar-link-desktop" onclick="transition(4)">Calendar</a>
-			<a href="#contact" class="sidebar-link sidebar-link-desktop" onclick="transition(5)">Contact</a>
+			<a href="#reviews" class="sidebar-link sidebar-link-desktop" onclick="transition(5)">Reviews</a>
+			<a href="#contact" class="sidebar-link sidebar-link-desktop" onclick="transition(6)">Contact</a>
 			<div class="sidebar-footer small-text">
 				Site design © Ellis Green. All rights reserved.<br>
 				Photos by <a href="http://josephberg.com" target="_blank">Joseph Berg</a> and <a href="http://facebook.com/fotosbill" target="_blank">Bill Goodman</a>.
@@ -95,12 +97,12 @@
 			<div class="page-section">
 				<div class="page-content">
 					<div class="page-title unselectable">
-						<div class="page-title-text" onclick="textify(this)">
-							<div class="font font-animated">a</div>
-							<div class="font font-animated">b</div>
-							<div class="font font-animated">o</div>
-							<div class="font font-animated">u</div>
-							<div class="font font-animated">t</div>
+						<div class="page-title-text" onclick="textifyTitle(1)">
+							<div>a</div>
+							<div>b</div>
+							<div>o</div>
+							<div>u</div>
+							<div>t</div>
 						</div>
 					</div>
 					<div class="page-title-spacer"></div>
@@ -121,12 +123,12 @@
 			<div class="page-section">
 				<div class="page-content">
 					<div class="page-title unselectable">
-						<div class="page-title-text" onclick="textify(this)">
-							<div class="font font-animated">m</div>
-							<div class="font font-animated">u</div>
-							<div class="font font-animated">s</div>
-							<div class="font font-animated">i</div>
-							<div class="font font-animated">c</div>
+						<div class="page-title-text" onclick="textifyTitle(2)">
+							<div>m</div>
+							<div>u</div>
+							<div>s</div>
+							<div>i</div>
+							<div>c</div>
 						</div>
 					</div>
 					<div class="page-title-spacer"></div>
@@ -235,16 +237,16 @@
 			<div class="page-section">
 				<div class="page-content">
 					<div class="page-title unselectable">
-						<div class="page-title-text" onclick="textify(this)">
-							<div class="font font-animated">v</div>
-							<div class="font font-animated">i</div>
-							<div class="font font-animated">d</div>
-							<div class="font font-animated">e</div>
-							<div class="font font-animated">o</div>
+						<div class="page-title-text" onclick="textifyTitle(3)">
+							<div>v</div>
+							<div>i</div>
+							<div>d</div>
+							<div>e</div>
+							<div>o</div>
 						</div>
 					</div>
 					<div class="page-title-spacer"></div>
-					<div class="video-entry">
+					<div class="page-entry-full">
 						<div class="video-container">
 							<iframe 
 								class="video"
@@ -256,7 +258,7 @@
 							</iframe>
 						</div>
 					</div>		
-					<div class="video-entry">
+					<div class="page-entry-full">
 						<div class="video-container">
 							<iframe 
 								class="video"
@@ -274,19 +276,19 @@
 			<div class="page-section">
 				<div class="page-content">
 					<div class="page-title unselectable">
-						<div class="page-title-text" onclick="textify(this)">
-							<div class="font font-animated">c</div>
-							<div class="font font-animated">a</div>
-							<div class="font font-animated">l</div>
-							<div class="font font-animated">e</div>
-							<div class="font font-animated">n</div>
-							<div class="font font-animated">d</div>
-							<div class="font font-animated">a</div>
-							<div class="font font-animated">r</div>
+						<div class="page-title-text" onclick="textifyTitle(4)">
+							<div>c</div>
+							<div>a</div>
+							<div>l</div>
+							<div>e</div>
+							<div>n</div>
+							<div>d</div>
+							<div>a</div>
+							<div>r</div>
 						</div>
 					</div>
 					<div class="page-title-spacer"></div>
-					<div class="calendar-entry">
+					<div class="page-entry-full">
 						<iframe
 							class="calendar calendar-mobile"
 							src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2f2f2&ctz=America%2FPhoenix&showTitle=0&showNav=1&mode=AGENDA&showPrint=0&showDate=1&showTabs=0&showTz=0&showCalendars=0&src=MGZuN3Rqb2R2YWNjZ3Bva29uNnZzbzI5NmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237CB342" 
@@ -302,19 +304,39 @@
 					</div>	
 				</div>
 			</div>
+			<!-- Reviews -->
+			<div class="page-section">
+				<div class="page-content">
+					<div class="page-title unselectable">
+						<div class="page-title-text" onclick="textifyTitle(5)">
+							<div>r</div>
+							<div>e</div>
+							<div>v</div>
+							<div>i</div>
+							<div>e</div>
+							<div>w</div>
+							<div>s</div>
+						</div>
+					</div>
+					<div class="page-title-spacer"></div>
+					<div class="page-entry-full">
+						<div id="gigsalad-reviews-widget"></div>
+					</div>
+				</div>
+			</div>
 			<!-- Contact -->
 			<div class="page-section">
 				<img class="big-image" style="height: 50vh;" src="images/contact-banner.png" alt="Photo of Ellis in August 2021 by Joseph Berg (facebook.com/fotosbill)" />
 				<div class="page-content" style="margin-top: 40px;">
 					<div class="page-title unselectable">
-						<div class="page-title-text" onclick="textify(this)">
-							<div class="font font-animated">c</div>
-							<div class="font font-animated">o</div>
-							<div class="font font-animated">n</div>
-							<div class="font font-animated">t</div>
-							<div class="font font-animated">a</div>
-							<div class="font font-animated">c</div>
-							<div class="font font-animated">t</div>
+						<div class="page-title-text" onclick="textifyTitle(6)">
+							<div>c</div>
+							<div>o</div>
+							<div>n</div>
+							<div>t</div>
+							<div>a</div>
+							<div>c</div>
+							<div>t</div>
 						</div>
 					</div>
 					<div class="page-title-spacer"></div>
@@ -346,5 +368,6 @@
 		<script type="text/javascript" src="scripts/shuffle.js"></script>
 		<script type="text/javascript" src="scripts/textify.js"></script>
 		<script type="text/javascript" src="scripts/transition.js"></script>
+		<script type="text/javascript" src="scripts/gigsalad.js"></script>
 	</body>	
 </html>

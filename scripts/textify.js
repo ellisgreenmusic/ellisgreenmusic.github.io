@@ -39,14 +39,20 @@ function animateName() {
 	}, 1800);
 }
 
-function textify(title) {
-	shuffle(indices);
-	for(let i = 0; i < title.children.length; i++) {
-		title.children[i].style = "font-family: " + styles[indices[i]] + "; animation-delay: " + (indices[i] * -.1) + "s;";
-	}
-}
-
 let titles = document.getElementsByClassName("page-title-text");
-for(let i = 0; i < titles.length; i++) {
-	textify(titles[i]);
+let keyframes = [
+	{transform: 'translateY(-10px)',  opacity: 0},
+	{transform: 'translateY(-10px)',  opacity: 0, offset: .5},
+	{transform: 'translateY(0)',  opacity: 1}
+];
+function textifyTitle(index) {
+	shuffle(indices);
+	let letters = titles[index - 1].children
+	for(let i = 0; i < letters.length; i++) {
+		letters[i].style = "font-family: " + styles[indices[i]] + ";";
+		letters[i].animate(keyframes, {
+			duration: 80 * indices[i] + 50,
+			easing: 'ease-out'
+		});
+	}
 }
