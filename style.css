@@ -447,6 +447,10 @@ a {
 .calendar {
 	width: 100%; height: 600px;
 }
+/* Gigsalad */
+#gigsalad-reviews-widget {
+	max-width: 100% !important;
+}
 /* For mobile, only show mobile calendar */
 .calendar-desktop {
 	display: none;
@@ -582,7 +586,7 @@ a {
 		cursor: pointer;
 		background-color: lightgrey;
 	}
-	.font-animated:hover {
+	.page-title-text:hover {
 		cursor: pointer;
 	}
 	.contact-text a:hover {

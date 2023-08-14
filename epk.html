@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Ellis Green Music electronic press kit">
+		<meta name="keywords" content="Ellis, Green, jazz, music, piano, pianist, bass, bassist, Phoenix, Arizona, electronic, press, kit, epk">
+		<meta name="author" content="Ellis Green">
+		<meta name="theme-color" content="#008000">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="epk-files/style.css" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#008000">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#00a300">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+		<!-- Font Awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Title -->
+		<title>EPK- Ellis Green Music</title>
+	</head>
+	<body onload="loaded(false)">
+		<h1>EPK- Ellis Green Music</h1>
+		<!-- Loading screen -->
+		<div class="loading-screen" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
+		</div>
+		<div class="banner">
+			<video class="banner-video" autoplay loop muted>
+				<source src="epk-files/images/header.mp4" type="video/mp4">
+			</video>
+			<div class="banner-text-container">
+				<div class="banner-text unselectable">
+					<b class="big-text condensed">Ellis Green Music</b>
+					<br>
+					Electronic Press Kit • <a href="https://www.ellisgreenmusic.com" target="_blank">Visit full website</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="body unselectable">
+			<div class="container">
+				<!--
+				<div class="index unselectable">
+					<div class="index-title">Jump to:</div>
+					<div class="index-entry" onclick="jumpTo(0);">About</div>
+					<div class="index-entry" onclick="jumpTo(1);">Clients&nbsp;and&nbsp;venues</div>
+					<div class="index-entry" onclick="jumpTo(2);">Reviews</div>
+					<div class="index-entry" onclick="jumpTo(3);">Audio</div>
+					<div class="index-entry" onclick="jumpTo(4);">Video</div>
+					<div class="index-entry" onclick="jumpTo(5);">Images</div>
+					<div class="index-entry" onclick="jumpTo(6);">Contact</div>
+				</div>
+				<div class="divider"></div>
+				-->
+				<!-- About -->
+				<div class="entry">
+					<div class="slogan">Local, personal, and professional</div>
+					<div class="regular-text">
+						Ellis Green Music provides elegant, engaging live jazz music,
+						whether in a concert setting or as background music for weddings,
+						restaurants, hotels, and parties. Ellis Green is a jazz bassist/pianist
+						and a Phoenix native who has performed at prestigious local venues
+						including the Biltmore, Phoenician, and Wrigley Mansion, for audiences
+						including Tempe mayor Corey Woods and Arizona governor Katie Hobbs.
+						Ellis Green Music is an hassle-free option for live music that
+						is already a proven hit with audiences around the Valley.
+					</div>
+				</div>
+				<div class="divider"></div>
+				<!-- Clients and venues -->
+				<div class="entry">
+					<div class="entry-title">Clients and venues</div>
+					<div class="logo-container">
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/biltmore.png" onclick="window.open('https://www.arizonabiltmore.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/phoenician.png" onclick="window.open('https://www.thephoenician.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/wrigley-mansion.png" onclick="window.open('https://wrigleymansion.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/hyatt-regency.png" onclick="window.open('https://www.hyatt.com/en-US/hotel/arizona/hyatt-regency-scottsdale-resort-and-spa/scott');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/sky-harbor.png" onclick="window.open('https://www.skyharbor.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/the-nash.png" onclick="window.open('https://thenash.org/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/tca.png" onclick="window.open('https://www.tempecenterforthearts.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="epk-files/images/metro-connections.png" onclick="window.open('https://metroconnections.com/');"/>
+						</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<!-- Reviews -->
+				<div class="entry">
+					<div class="entry-title">Reviews</div>
+					<div id="gigsalad-reviews-widget"></div>
+				</div>
+				<div class="divider"></div>
+				<!-- Audio -->
+				<div class="entry">
+					<div class="entry-title">Audio samples</div>
+					<div class="panel-container">
+						<div>
+							<div class="panel-entry"><b>Trio</b></div>
+							<div class="panel-entry"><audio controls src="epk-files/audio/trio1.mp3"></audio></div>
+							<div class="panel-entry"><audio controls src="epk-files/audio/trio2.mp3"></audio></div>
+						</div>
+						<div>
+							<div class="panel-entry"><b>Solo piano</b></div>
+							<div class="panel-entry"><audio controls src="epk-files/audio/solo.mp3"></audio></div>
+						</div>
+					</div>
+					<div class="caption-text">For more, visit <a href="https://www.ellisgreenmusic.com#music" target="_blank">ellisgreenmusic.com#music</a></div>
+				</div>
+				<div class="divider"></div>
+				<!-- Video -->
+				<div class="entry">
+					<div class="entry-title">Video samples</div>
+					<div class="video-container">
+						<iframe 
+							class="video"
+							src="https://www.youtube.com/embed/8P-hU1RHiCo"
+							title="Sample video clips" 
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<!-- 
+				<div class="entry">
+					<div class="entry-title">Images</div>
+				</div>
+				<div class="divider"></div>
+				 -->
+				<!-- Contact -->
+				<div class="entry">
+					<div class="entry-title">Contact</div>
+					<div class="regular-text"><b>We’d love to hear from you!</b> Please reach out anytime for a quote or for more information.</div>
+					<table class="padded-table">
+						<tr>
+							<td style="text-align: center"><div class="fa fa-phone"></div></td>
+							<td><a href="tel:6027700329">(602) 770-0329</a></td>
+						</tr>
+						<tr>
+							<td style="text-align: center"><div class="fa fa-envelope"></div></td>
+							<td><a href="mailto:ellisgreenmusic@gmail.com">ellisgreenmusic@gmail.com</a></td>
+						</tr>
+						<tr>
+							<td style="text-align: center"><div class="fa fa-instagram"></div></td>
+							<td><a href="https://www.instagram.com/ellisgreenmusic" target="_blank">instagram.com/ellisgreenmusic</a></td>
+						</tr>
+					</table>
+				</div>
+				<div class="divider"></div>
+				<!-- Footer -->
+				<div class="entry">
+					<div class="caption-text">Site design by Ellis Green. All logos &#169; their respective owners. Full site at <a href="https://www.ellisgreenmusic.com" target="_blank">ellisgreenmusic.com</a>.</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="scripts/loaded.js"></script>
+		<script type="text/javascript" src="scripts/gigsalad.js"></script>
+		<script type="text/javascript">
+			let players = document.getElementsByTagName('audio');
+			document.addEventListener('play', function(e) {
+				for(let i = 0; i < players.length; i++) {
+					if(e.target !== players[i]) {
+						players[i].pause();
+					}
+				}
+			}, true);
+		</script>
+	</body>	
+</html>
