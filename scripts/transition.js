@@ -11,7 +11,7 @@ if(anchor === "#home" || anchor === "") {
 } else {
 	if(anchor === "#about") {
 		current = 1;
-	} else if(anchor === "#music") {
+	} else if(anchor === "#albums") {
 		current = 2;
 	} else if(anchor === "#video") {
 		current = 3;
