@@ -13,14 +13,16 @@ if(anchor === "#home" || anchor === "") {
 		current = 1;
 	} else if(anchor === "#albums") {
 		current = 2;
-	} else if(anchor === "#video") {
+	} else if(anchor === "#gallery") {
 		current = 3;
-	} else if(anchor === "#calendar") {
+	} else if(anchor === "#video") {
 		current = 4;
-	} else if(anchor === "#reviews") {
+	} else if(anchor === "#calendar") {
 		current = 5;
-	} else if(anchor === "#contact") {
+	} else if(anchor === "#reviews") {
 		current = 6;
+	} else if(anchor === "#contact") {
+		current = 7;
 	}
 	textifyTitle(current);
 }

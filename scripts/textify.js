@@ -33,7 +33,7 @@ function animateName() {
 			subtitle.style.visibility = "visible";
 			subtitle.style.opacity = "1";
 		}, 500);
-	}, 500);
+	}, 300);
 	setTimeout(() => {
 		setInterval(textifyName, 1300);
 	}, 1800);
