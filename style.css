@@ -472,12 +472,13 @@ a {
 }
 .logo {
 	min-width: 140px;
-	width: 24%;
 	-webkit-transition: -webkit-transform .2s;
 	transition: -webkit-transform .2s;
 	-o-transition: transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
+	/* Mobile sizing */
+	width: 48%;
 }
 .logo-image {
 	border-radius: 5px;
@@ -662,6 +663,9 @@ a {
 	.contact-text:hover .contact-tooltip  {
 		opacity: 1;
 		margin-top: 5px;
+	}
+	.logo {
+		width: 24%;
 	}
 	.logo:hover {
 		-webkit-transform: scale(1.015);
