@@ -17,12 +17,12 @@ if(anchor === "#home" || anchor === "") {
 		current = 3;
 	} else if(anchor === "#video") {
 		current = 4;
-	} else if(anchor === "#calendar") {
-		current = 5;
+	/* } else if(anchor === "#calendar") {
+		current = 5; */
 	} else if(anchor === "#reviews") {
-		current = 6;
+		current = 5;
 	} else if(anchor === "#contact") {
-		current = 7;
+		current = 6;
 	}
 	textifyTitle(current);
 }
