@@ -394,10 +394,21 @@ a {
 	font-size: 16pt;
 	line-height: 160%;
 }
-.albums-title-text {
+.albums-header-text {
 	font-weight: bold;
 	font-size: 20pt;
 	line-height: 120%;
+}
+.reviews-header-text {
+	font-weight: bold;
+	font-size: 13pt;
+	padding-bottom: 5px;
+}
+.reviews-text {
+	padding-bottom: 5px;
+}
+.stars {
+	font-size: 14pt;
 }
 .tracklist-table td {
 	vertical-align: top;
@@ -600,8 +611,11 @@ a {
 	.subtitle-text {
 		font-size: 20pt;
 	}
-	.albums-title-text {
+	.albums-header-text {
 		font-size: 24pt;
+	}
+	.reviews-header-text {
+		font-size: 14pt;
 	}
 	.home-page-header-title {
 		font-size: 60pt; 
