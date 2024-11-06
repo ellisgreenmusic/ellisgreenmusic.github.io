@@ -298,6 +298,11 @@ a {
 	max-width: 100%;
 	padding: 20px;
 }
+.page-entry-spacer {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 .page-image-entry {
 	text-align: center;
 	padding-bottom: 0;
