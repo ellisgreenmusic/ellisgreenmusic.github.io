@@ -5,7 +5,8 @@
 	<style>
 		body {
 			font-family: sans-serif;
-			font-size: 2vh;
+			font-size: 15px;
+			font-weight: bold;
 			margin: 0;
 			padding: 0;
 			overflow-x: hidden;
@@ -14,10 +15,6 @@
 				-ms-user-select: none;
 					user-select: none;
 		}
-		.fa {
-			font-size: 5vh;
-			margin: .5vh;
-		}
 		.fa:hover {
 			cursor: pointer;
 			color: #4d4d4d;
@@ -25,7 +22,7 @@
 		#reset-button {
 			background-color: lightgrey;
 			border-radius: 3px;
-			padding: 1vh;
+			padding: 10px;
 			width: -webkit-min-content;
 			width: -moz-min-content;
 			width: min-content;
@@ -40,9 +37,9 @@
 			display: flex;
 		}
 		.cell {
-			height: 2vh;
-			width: 2vh;
-			margin: .2vh;
+			height: 15px;
+			width: 15px;
+			margin: 2px;
 		}
 		#container {
 			width: 100vw;
@@ -63,16 +60,16 @@
 			        justify-content: center;
 		}
 		#button-container {
-			font-size: 5vh;
+			font-size: 35px;
 		}
 		.side-panel {
 			display: inline-block;
 		}
 		.left-margin {
-			margin-left: 3vh;
+			margin-left: 20px;
 		}
 		.top-margin {
-			margin-top: 3vh;
+			margin-top: 20px;
 		}
 		.lose-panel {
 			position: fixed;
@@ -99,7 +96,7 @@
 		<div id="button-container" class="top-margin">
 			<i class="fa fa-arrow-circle-left" onclick="moveHorizontally(-1);"></i>
 			<i class="fa fa-arrow-circle-right" onclick="moveHorizontally(1);"></i>
-			<i class="fa fa-arrow-down" onclick="drop();" style="margin-left: 2vh; margin-right: 2vh"></i>
+			<i class="fa fa-arrow-down" onclick="drop();" style="margin-left: 20px; margin-right: 20px"></i>
 			<i class="fa fa-rotate-left" onclick="rotate(false);"></i>
 			<i class="fa fa-rotate-right" onclick="rotate(true);"></i>
 		</div>
