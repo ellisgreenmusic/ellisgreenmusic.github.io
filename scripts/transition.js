@@ -13,22 +13,30 @@ if(anchor === "#home" || anchor === "") {
 		current = 1;
 	} else if(anchor === "#albums") {
 		current = 2;
-	} else if(anchor === "#gallery") {
+	} else if(anchor === "#jazz-band") {
 		current = 3;
-	} else if(anchor === "#video") {
+	} else if(anchor === "#solo-piano") {
 		current = 4;
-	/* } else if(anchor === "#calendar") {
-		current = 5; */
-	} else if(anchor === "#reviews") {
+	} else if(anchor === "#weddings") {
 		current = 5;
-	} else if(anchor === "#contact") {
+	} else if(anchor === "#holiday") {
 		current = 6;
+	} else { //contact, or anything else
+		current = 7;
 	}
 	textifyTitle(current);
 }
 sections[current].classList.add("page-section-active");
 linksMobile[current].classList.add("sidebar-link-active");
 linksDesktop[current].classList.add("sidebar-link-active");
+
+let month = new Date().getMonth();
+if(month === 10 || month === 11) {
+	let holidayLinks = document.getElementsByClassName("holiday-link");
+	for (let i = 0; i < holidayLinks.length; i++) {
+		holidayLinks[i].style.display = "block";
+	}
+}
 
 function transition(index) {
 	if(current === index || semaphore === true) {

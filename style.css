@@ -111,6 +111,12 @@ a {
 	padding-left: 30px;
 	padding-right: 30px;
 }
+.sidebar-category {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 .sidebar-link {
 	color: black;
 	text-decoration: none;
@@ -135,6 +141,7 @@ a {
 	color: white;
 	font-weight: 700;
 	background-color: #008000;
+	border: 1px #008000;
 }
 .sidebar-footer {
 	margin-top: auto;
@@ -261,8 +268,11 @@ a {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	margin-top: 80px;
+	margin-top: 40px;
 	margin-bottom: 20px;
+}
+.page-content-spacer {
+	height: 40px;
 }
 .page-title {
 	width: 740px;
@@ -283,11 +293,6 @@ a {
 	display: flex;	
 }
 /* For positioning page title */
-.page-title-spacer {
-	height: 0;
-	width: 390px;
-	max-width: 100%;
-}
 .page-entry {
 	width: 350px;
 	max-width: 100%;
@@ -297,12 +302,7 @@ a {
 	width: 740px;
 	max-width: 100%;
 	padding: 20px;
-}
-.page-entry-spacer {
-	height: 0;
-	padding-top: 0;
-	padding-bottom: 0;
-}
+}=
 .page-image-entry {
 	text-align: center;
 	padding-bottom: 0;
@@ -313,9 +313,7 @@ a {
 	                box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
 }
 .caption {
-	width: 100%;
-	padding-top: 10px;
-	font-style: italic;
+	padding: 10px 20px 0 20px;
 	text-align: center;
 }
 .gallery-image {
@@ -389,6 +387,9 @@ a {
 	font-size: 10pt;
 	line-height: 150%;
 }
+.regular-text ul {
+	margin-top: 3px;
+}
 .big-text {
 	font-size: 24pt;
 }
@@ -424,7 +425,7 @@ a {
 	width: min-content;
 	position: relative;
 	padding-top: 5px;
-	font-size: 20pt;
+	font-size: 18pt;
 }
 .contact-text a {
 	color: black;
@@ -466,12 +467,19 @@ a {
 .grey-text {
 	color: #808080;
 }
+.holiday-list {
+	column-count: 1;
+}
 /* Images */
-.big-image {
+.banner-image-container {
 	width: 100%; 
-	-o-object-fit: cover; 
-	   object-fit: cover; 
+	height: 50vh;
 	background-color: #141414;
+}
+.banner-image {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 /* Past venue logos */
 .logo-container {
@@ -608,7 +616,10 @@ a {
 		width: inherit;
 	}
 	.page-content {
-		margin-top: 60px;
+		margin-top: 30px;
+	}
+	.page-content-spacer {
+		height: 30px;
 	}
 	.big-text {
 		font-size: 34pt;
@@ -628,12 +639,6 @@ a {
 	.home-page-header-subtitle {
 		font-size: 16pt;
 	}
-	footer {
-		position: absolute;
-		bottom: 0;
-		height: 80px;
-		width: inherit;
-	}
 	.video-container {
 		width: 100%;
 		padding-bottom: 56.25%;
@@ -646,6 +651,9 @@ a {
 	.name-subtitle {
 		font-size: 18pt; 
 		padding-top: 40px;
+	}
+	.holiday-list {
+		column-count: 2;
 	}
 	/* For desktop, only show desktop calendar */
 	.calendar-desktop {
