@@ -26,10 +26,10 @@
 		<!-- Font Awesome-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Title -->
-		<title>Ellis Green Music- Home</title>
+		<title>Ellis Green Music- Solo Piano</title>
 	</head>
-	<body onload="loaded(true)">
-		<h1>Ellis Green Music- Home</h1>
+	<body onload="loaded(false)">
+		<h1>Ellis Green Music- Solo Piano</h1>
 		<!-- Loading screen -->
 		<div class="loading-screen" id="loading-screen">
 			<div class="loading-circle"></div>
@@ -48,12 +48,12 @@
 			</div>
 			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
 			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
-			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">Home</a>
+			<a href="index.html" class="sidebar-link sidebar-link-mobile">Home</a>
 			<a href="about.html" class="sidebar-link sidebar-link-mobile">About</a>
 			<a href="albums.html" class="sidebar-link sidebar-link-mobile">Albums</a>
 			<b class="sidebar-category small-text">CATEGORIES</b>
 			<a href="jazz-band.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Jazz Band</a>
-			<a href="solo-piano.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">&nbsp;&nbsp;&nbsp;Solo Piano</a>
 			<a href="weddings.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Weddings</a>
 			<a href="holiday.html" class="sidebar-link sidebar-link-mobile holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
 			<a href="contact.html" class="sidebar-link sidebar-link-mobile">Contact</a>
@@ -65,12 +65,12 @@
 		<div class="sidebar sidebar-desktop unselectable">
 			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
 			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
-			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">Home</a>
+			<a href="index.html" class="sidebar-link sidebar-link-desktop">Home</a>
 			<a href="about.html" class="sidebar-link sidebar-link-desktop">About</a>
 			<a href="albums.html" class="sidebar-link sidebar-link-desktop">Albums</a>
 			<b class="sidebar-category small-text">CATEGORIES</b>
 			<a href="jazz-band.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Jazz Band</a>
-			<a href="solo-piano.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">&nbsp;&nbsp;&nbsp;Solo Piano</a>
 			<a href="weddings.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Weddings</a>
 			<a href="holiday.html" class="sidebar-link sidebar-link-desktop holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
 			<a href="contact.html" class="sidebar-link sidebar-link-desktop">Contact</a>
@@ -79,35 +79,93 @@
 			</div>
 		</div>
 		<!-- Page content -->
-		<div class="page home-page" id="page">
-			<div class="name-container unselectable">
-				<div class="name">
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">l</div>
-					<div class="font-hidden font name-letters">l</div>
-					<div class="font-hidden font name-letters">i</div>
-					<div class="font-hidden font name-letters">s</div>
-				</div>
-				<div class="name">
-					<div class="font-hidden font name-letters">g</div>
-					<div class="font-hidden font name-letters">r</div>
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">n</div>
-				</div>
-				<div class="name-subtitle" id="name-subtitle">JAZZ PIANO/BASS &bull; PHOENIX, AZ</div>
+		<div class="page" id="page">
+			<div class="banner-image-container">
+				<img class="banner-image" src="images/banners/solo-piano.png"/>
 			</div>
-			<div class="bg-video-container">
-				<video class="bg-video" autoplay loop muted>
-					<source src="video/home.mp4" type="video/mp4">
-				</video>
+			<div class="small-text grey-text caption">Ellis performing on piano for an event at Scottsdale Fashion Square. Photo credit: Haute Media</div>
+			<div class="page-content unselectable">
+				<div class="page-title">
+					<div class="page-title-text" id="title" onclick="fontShuffleTitle()">
+						<div>s</div>
+						<div>o</div>
+						<div>l</div>
+						<div>o</div>
+						&nbsp;
+						<div>p</div>
+						<div>i</div>
+						<div>a</div>
+						<div>n</div>
+						<div>o</div>
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="subtitle-text" style="margin-bottom: 5px;">Simple sophistication</div>
+					<div class="regular-text">
+						Solo jazz piano is an effortless way to add an elegant flair to any occasion, convenient for any space and any volume, that comes with a smaller price tag than would a full band.
+						This classic sound is perfect for creating a classy ambience in the background.
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="video-container">
+						<iframe 
+							class="video"
+							src="https://www.youtube.com/embed/ZS9f4l0-2t4"
+							title="Solo piano sampler" 
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+				<div class="page-entry-full style="padding-bottom: 0">
+					<div class="subtitle-text">Reviews</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Masterful command of the keys!</div>
+					<div class="regular-text reviews-text">
+						Ellis is a great pianist with an extensive repertoire.
+						He arrived on time, prepared to play all our requests, delivered a solid 90 minute performance and made our party!
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Liz, Scottsdale (<a href="https://www.gigsalad.com/ellis_green_music_scottsdale/review/377261" target="_blank">link</a>)</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Wonderful pianist for our birthday party</div>
+					<div class="regular-text reviews-text">
+						Ellis performed wonderfully to provide beautiful music for our party.
+						He has a strong repertoire of jazz numbers- just what we wanted.
+						And, he couldn’t be easier to work with. Overall he did a super job for us! Thank you, Ellis!
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Wendy, Phoenix (<a href="https://www.gigsalad.com/ellis_green_music_scottsdale/review/375246" target="_blank">link</a>)</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Great cocktail music</div>
+					<div class="regular-text reviews-text">
+						Ellis arrived on time and played wonderful "background music" for my cocktail party.
+						He played the music I requested and even stayed later as the party extended. Good job!
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Suzen, Scottsdale (<a href="https://www.gigsalad.com/ellis_green_music_scottsdale/review/395981" target="_blank">link</a>)</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Wonderful job</div>
+					<div class="regular-text reviews-text">
+						Ellis did a wonderful job.
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Pam, Scottsdale (<a href="https://www.gigsalad.com/ellis_green_music_scottsdale/review/397346" target="_blank">link</a>)</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="regular-text grey-text" style="text-align: center">View these and more verified reviews on <a href="https://www.gigsalad.com/ellis_green_music_scottsdale#reviews" target="_blank">gigsalad.com</a>.</div>
+				</div>
 			</div>
 		</div>
 		<!-- End page content -->
 		<script type="text/javascript" src="scripts/shuffle.js"></script>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/font-shuffle.js"></script>
-		<script type="text/javascript" src="scripts/animate-home.js"></script>
 		<script type="text/javascript" src="scripts/loaded.js"></script>
 	</body>	
 </html>

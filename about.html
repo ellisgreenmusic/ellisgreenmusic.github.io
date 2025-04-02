@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Ellis Green, a jazz piano/bass player from Phoenix, Arizona">
+		<meta name="keywords" content="Ellis, Green, jazz, music, piano, pianist, bass, bassist, Phoenix, Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Arizona">
+		<meta name="author" content="Ellis Green">
+		<meta name="theme-color" content="#008000">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#008000">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#00a300">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Boogaloo&family=Fredoka+One&family=Henny+Penny&family=Lobster&family=Palette+Mosaic&family=Sevillana&family=Smokum&family=Syne+Tactile&display=swap" rel="stylesheet">
+		<!-- Font Awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Title -->
+		<title>Ellis Green Music- About</title>
+	</head>
+	<body onload="loaded(false)">
+		<h1>Ellis Green Music- About</h1>
+		<!-- Loading screen -->
+		<div class="loading-screen" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
+		</div>
+		<!-- Mobile navbar-->
+		<div class="navbar unselectable" onclick="openMenu();">
+			<div class="navbar-button">≡</div>
+		</div>
+		<!-- Mobile sidebar overlay -->
+		<div class="overlay" id="sidebar-overlay" onclick="closeMenu();"></div>
+		<!-- Mobile sidebar -->
+		<div class="sidebar sidebar-mobile unselectable" id="sidebar-mobile">
+			<div class="sidebar-close-button-container">
+				<div class="sidebar-close-button" onclick="closeMenu();">&times;</div>
+			</div>
+			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
+			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
+			<a href="index.html" class="sidebar-link sidebar-link-mobile">Home</a>
+			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">About</a>
+			<a href="albums.html" class="sidebar-link sidebar-link-mobile">Albums</a>
+			<b class="sidebar-category small-text">CATEGORIES</b>
+			<a href="jazz-band.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Jazz Band</a>
+			<a href="solo-piano.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a href="weddings.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Weddings</a>
+			<a href="holiday.html" class="sidebar-link sidebar-link-mobile holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
+			<a href="contact.html" class="sidebar-link sidebar-link-mobile">Contact</a>
+			<div class="sidebar-footer small-text grey-text">
+				Site design © Ellis Green. All rights reserved.
+			</div>
+		</div>
+		<!-- Desktop sidebar -->
+		<div class="sidebar sidebar-desktop unselectable">
+			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
+			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
+			<a href="index.html" class="sidebar-link sidebar-link-desktop">Home</a>
+			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">About</a>
+			<a href="albums.html" class="sidebar-link sidebar-link-desktop">Albums</a>
+			<b class="sidebar-category small-text">CATEGORIES</b>
+			<a href="jazz-band.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Jazz Band</a>
+			<a href="solo-piano.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a href="weddings.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Weddings</a>
+			<a href="holiday.html" class="sidebar-link sidebar-link-desktop holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
+			<a href="contact.html" class="sidebar-link sidebar-link-desktop">Contact</a>
+			<div class="sidebar-footer small-text grey-text">
+				Site design © Ellis Green. All rights reserved.
+			</div>
+		</div>
+		<!-- Page content -->
+		<div class="page" id="page">
+			<div class="page-content-spacer"></div>
+			<div class="page-content unselectable">
+				<div class="page-title">
+					<div class="page-title-text" id="title" onclick="fontShuffleTitle()">
+						<div>a</div>
+						<div>b</div>
+						<div>o</div>
+						<div>u</div>
+						<div>t</div>
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="subtitle-text" style="margin-bottom: 5px;">Local, personal, and professional</div>
+					<div class="regular-text">
+						<b>Ellis Green Music</b> provides elegant, engaging live jazz music, whether in a concert setting or as background music for weddings, 
+						restaurants, retirement communities, hotels, and parties.
+						<br><br>
+						Ellis Green is a jazz pianist/bassist from Phoenix. For nearly ten years Ellis has been performing around the valley at
+						prestigious local venues including LON's at the Hermosa Inn, the Phoenician, and Scottsdale Fashion Square. <i class="small-text grey-text">See more below.</i>
+						<br><br>
+						During his career Ellis has performed at events for clients ranging from ASU to the NFL, and for audiences including the mayors of Phoenix and Tempe and the governor of Arizona.
+						<br><br>
+						Ellis regularly performs in different configurations, whether as a solo pianist or as a trio with upright bass and drums—
+						whichever is best for a client's budget/space.
+						<br><br>
+						<b>Let's work together!</b> <i class="small-text grey-text"><a href="#contact" onclick="transition(6)">Get in touch</a> today.</i>
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="subtitle-text">Past venues</div>
+					<div class="logo-container">
+						<div class="logo">
+							<img class="logo-image" src="images/logos/biltmore.png" onclick="window.open('https://www.arizonabiltmore.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/phoenician.png" onclick="window.open('https://www.thephoenician.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/wrigley-mansion.png" onclick="window.open('https://wrigleymansion.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/hermosa-inn.png" onclick="window.open('https://www.hermosainn.com/');"/>
+						</div>
+						
+						<div class="logo">
+							<img class="logo-image" src="images/logos/four-seasons.png" onclick="window.open('https://www.fourseasons.com/scottsdale/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/fairmont.png" onclick="window.open('https://www.fairmont.com/scottsdale/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/royal-palms.png" onclick="window.open('https://royalpalmshotel.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/global-ambassador.png" onclick="window.open('https://www.globalambassadorhotel.com/');"/>
+						</div>
+						
+						<div class="logo">
+							<img class="logo-image" src="images/logos/mim.png" onclick="window.open('https://mim.org/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/dbg.png" onclick="window.open('https://dbg.org/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/sky-harbor.png" onclick="window.open('https://www.skyharbor.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/asu.png" onclick="window.open('https://www.asu.edu/');"/>
+						</div>
+
+						<div class="logo">
+							<img class="logo-image" src="images/logos/fashion-square.png" onclick="window.open('https://www.fashionsquare.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/talking-stick.png" onclick="window.open('https://www.talkingstickresort.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/maravilla.png" onclick="window.open('https://www.srgseniorliving.com/scottsdale-az-maravilla/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/ravenscroft.png" onclick="window.open('https://theravenscroft.com/');"/>
+						</div>
+	
+						<div class="logo">
+							<img class="logo-image" src="images/logos/the-nash.png" onclick="window.open('https://thenash.org/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/tca.png" onclick="window.open('https://www.tempecenterforthearts.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/mac.png" onclick="window.open('https://www.mesaartscenter.com/');"/>
+						</div>
+						<div class="logo">
+							<img class="logo-image" src="images/logos/cca.png" onclick="window.open('https://www.chandlercenter.org/');"/>
+						</div>
+					</div>
+					<div class="small-text grey-text caption">All logos © their respective owners.</div>
+				</div>
+			</div>
+		</div>
+		<!-- End page content -->
+		<script type="text/javascript" src="scripts/shuffle.js"></script>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/font-shuffle.js"></script>
+		<script type="text/javascript" src="scripts/loaded.js"></script>
+	</body>	
+</html>

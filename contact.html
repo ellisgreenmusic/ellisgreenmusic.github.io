@@ -26,10 +26,10 @@
 		<!-- Font Awesome-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Title -->
-		<title>Ellis Green Music- Home</title>
+		<title>Ellis Green Music- Contact</title>
 	</head>
-	<body onload="loaded(true)">
-		<h1>Ellis Green Music- Home</h1>
+	<body onload="loaded(false)">
+		<h1>Ellis Green Music- Contact</h1>
 		<!-- Loading screen -->
 		<div class="loading-screen" id="loading-screen">
 			<div class="loading-circle"></div>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
 			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
-			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">Home</a>
+			<a href="index.html" class="sidebar-link sidebar-link-mobile">Home</a>
 			<a href="about.html" class="sidebar-link sidebar-link-mobile">About</a>
 			<a href="albums.html" class="sidebar-link sidebar-link-mobile">Albums</a>
 			<b class="sidebar-category small-text">CATEGORIES</b>
@@ -56,7 +56,7 @@
 			<a href="solo-piano.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Solo Piano</a>
 			<a href="weddings.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Weddings</a>
 			<a href="holiday.html" class="sidebar-link sidebar-link-mobile holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
-			<a href="contact.html" class="sidebar-link sidebar-link-mobile">Contact</a>
+			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">Contact</a>
 			<div class="sidebar-footer small-text grey-text">
 				Site design © Ellis Green. All rights reserved.
 			</div>
@@ -65,7 +65,7 @@
 		<div class="sidebar sidebar-desktop unselectable">
 			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
 			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
-			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">Home</a>
+			<a href="index.html" class="sidebar-link sidebar-link-desktop">Home</a>
 			<a href="about.html" class="sidebar-link sidebar-link-desktop">About</a>
 			<a href="albums.html" class="sidebar-link sidebar-link-desktop">Albums</a>
 			<b class="sidebar-category small-text">CATEGORIES</b>
@@ -73,41 +73,67 @@
 			<a href="solo-piano.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Solo Piano</a>
 			<a href="weddings.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Weddings</a>
 			<a href="holiday.html" class="sidebar-link sidebar-link-desktop holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
-			<a href="contact.html" class="sidebar-link sidebar-link-desktop">Contact</a>
+			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">Contact</a>
 			<div class="sidebar-footer small-text grey-text">
 				Site design © Ellis Green. All rights reserved.
 			</div>
 		</div>
 		<!-- Page content -->
-		<div class="page home-page" id="page">
-			<div class="name-container unselectable">
-				<div class="name">
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">l</div>
-					<div class="font-hidden font name-letters">l</div>
-					<div class="font-hidden font name-letters">i</div>
-					<div class="font-hidden font name-letters">s</div>
+		<div class="page" id="page">
+			<div class="page-content-spacer"></div>
+			<div class="page-content" style="margin-top: 40px;">
+				<div class="page-title unselectable">
+					<div class="page-title-text" id="title" onclick="fontShuffleTitle()">
+						<div>c</div>
+						<div>o</div>
+						<div>n</div>
+						<div>t</div>
+						<div>a</div>
+						<div>c</div>
+						<div>t</div>
+					</div>
 				</div>
-				<div class="name">
-					<div class="font-hidden font name-letters">g</div>
-					<div class="font-hidden font name-letters">r</div>
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">e</div>
-					<div class="font-hidden font name-letters">n</div>
+				<div class="page-entry-full unselectable">
+					<div class="regular-text">
+						<b>Let's get in touch!</b>
+						Reach out anytime with questions or comments.
+						<br><br>
+						For performance inquiries, feel free to call/text/email or fill out our
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGbTQiZ23IxHr7IPPJmNrYkw7mMAe3nsRosn86Szk-YWo9_g/viewform?usp=header" target="_blank">Performance Inquiry form</a>.
+					</div>
 				</div>
-				<div class="name-subtitle" id="name-subtitle">JAZZ PIANO/BASS &bull; PHOENIX, AZ</div>
-			</div>
-			<div class="bg-video-container">
-				<video class="bg-video" autoplay loop muted>
-					<source src="video/home.mp4" type="video/mp4">
-				</video>
+				<div class="page-entry">
+					<b class="small-text">PHONE</b>
+					<div class="contact-text" tabindex="1">
+						<a onclick="navigator.clipboard.writeText('6027700329');">(602)&nbsp;770&#8209;0329&nbsp;</a>
+						<div class="contact-tooltip"></div>
+					</div>
+				</div>
+				<div class="page-entry">
+					<b class="small-text">EMAIL</b>
+					<div class="contact-text" tabindex="2">
+						<a onclick="navigator.clipboard.writeText('ellisgreenmusic@gmail.com');">ellisgreenmusic@gmail.com</a>
+						<div class="contact-tooltip"></div>
+					</div>
+				</div>
+				<div class="page-entry unselectable">
+					<b class="small-text">INSTAGRAM</b>
+					<div class="contact-text">
+						<a href="https://www.instagram.com/ellisgreenmusic/" target="_blank">@ellisgreenmusic</a>
+					</div>
+				</div>
+				<div class="page-entry unselectable">
+					<b class="small-text">YOUTUBE</b>
+					<div class="contact-text">
+						<a href="https://www.youtube.com/@ellisgreenmusic" target="_blank">@ellisgreenmusic</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- End page content -->
 		<script type="text/javascript" src="scripts/shuffle.js"></script>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/font-shuffle.js"></script>
-		<script type="text/javascript" src="scripts/animate-home.js"></script>
 		<script type="text/javascript" src="scripts/loaded.js"></script>
 	</body>	
 </html>

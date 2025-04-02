@@ -196,8 +196,6 @@ a {
 /* Page content */
 .page {
 	z-index: 1;
-}
-.page-section {
 	position: absolute;
 	width: 100vw;
 	-webkit-transition: opacity .4s, -webkit-transform .4s;
@@ -212,7 +210,7 @@ a {
 	    -ms-transform: scale(.985);
 	        transform: scale(.985);
 }
-.page-section-active {
+.page-active {
 	top: 0;
 	opacity: 100%;
 	-webkit-transform: initial;
@@ -611,9 +609,6 @@ a {
 	}
 	.page-image {
 		max-height: none;
-	}
-	.page-section {
-		width: inherit;
 	}
 	.page-content {
 		margin-top: 30px;

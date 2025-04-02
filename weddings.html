@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Ellis Green, a jazz piano/bass player from Phoenix, Arizona">
+		<meta name="keywords" content="Ellis, Green, jazz, music, piano, pianist, bass, bassist, Phoenix, Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Arizona">
+		<meta name="author" content="Ellis Green">
+		<meta name="theme-color" content="#008000">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#008000">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#00a300">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Boogaloo&family=Fredoka+One&family=Henny+Penny&family=Lobster&family=Palette+Mosaic&family=Sevillana&family=Smokum&family=Syne+Tactile&display=swap" rel="stylesheet">
+		<!-- Font Awesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Title -->
+		<title>Ellis Green Music- Weddings</title>
+	</head>
+	<body onload="loaded(false)">
+		<h1>Ellis Green Music- Weddings</h1>
+		<!-- Loading screen -->
+		<div class="loading-screen" id="loading-screen">
+			<div class="loading-circle"></div>
+			<div class="loading-circle" style="animation-delay: -.15s"></div>
+		</div>
+		<!-- Mobile navbar-->
+		<div class="navbar unselectable" onclick="openMenu();">
+			<div class="navbar-button">≡</div>
+		</div>
+		<!-- Mobile sidebar overlay -->
+		<div class="overlay" id="sidebar-overlay" onclick="closeMenu();"></div>
+		<!-- Mobile sidebar -->
+		<div class="sidebar sidebar-mobile unselectable" id="sidebar-mobile">
+			<div class="sidebar-close-button-container">
+				<div class="sidebar-close-button" onclick="closeMenu();">&times;</div>
+			</div>
+			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
+			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
+			<a href="index.html" class="sidebar-link sidebar-link-mobile">Home</a>
+			<a href="about.html" class="sidebar-link sidebar-link-mobile">About</a>
+			<a href="albums.html" class="sidebar-link sidebar-link-mobile">Albums</a>
+			<b class="sidebar-category small-text">CATEGORIES</b>
+			<a href="jazz-band.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Jazz Band</a>
+			<a href="solo-piano.html" class="sidebar-link sidebar-link-mobile">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); scrollToTop();">&nbsp;&nbsp;&nbsp;Weddings</a>
+			<a href="holiday.html" class="sidebar-link sidebar-link-mobile holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
+			<a href="contact.html" class="sidebar-link sidebar-link-mobile">Contact</a>
+			<div class="sidebar-footer small-text grey-text">
+				Site design © Ellis Green. All rights reserved.
+			</div>
+		</div>
+		<!-- Desktop sidebar -->
+		<div class="sidebar sidebar-desktop unselectable">
+			<div class="sidebar-logo big-text condensed">Ellis Green Music</div>
+			<div class="sidebar-text regular-text">Jazz piano/bass player from Phoenix, AZ.</div>
+			<a href="index.html" class="sidebar-link sidebar-link-desktop">Home</a>
+			<a href="about.html" class="sidebar-link sidebar-link-desktop">About</a>
+			<a href="albums.html" class="sidebar-link sidebar-link-desktop">Albums</a>
+			<b class="sidebar-category small-text">CATEGORIES</b>
+			<a href="jazz-band.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Jazz Band</a>
+			<a href="solo-piano.html" class="sidebar-link sidebar-link-desktop">&nbsp;&nbsp;&nbsp;Solo Piano</a>
+			<a class="sidebar-link sidebar-link-desktop sidebar-link-active" onclick="scrollToTop();">&nbsp;&nbsp;&nbsp;Weddings</a>
+			<a href="holiday.html" class="sidebar-link sidebar-link-desktop holiday-link" style="display: none;">&nbsp;&nbsp;&nbsp;Holiday</a>
+			<a href="contact.html" class="sidebar-link sidebar-link-desktop">Contact</a>
+			<div class="sidebar-footer small-text grey-text">
+				Site design © Ellis Green. All rights reserved.
+			</div>
+		</div>
+		<!-- Page content -->
+		<div class="page" id="page">
+			<div class="banner-image-container">
+				<img class="banner-image" src="images/banners/weddings.png"/>
+			</div>
+			<div class="small-text grey-text caption">A wedding ceremony and reception in the Superstition Mountains featuring Ellis Green Music.</div>
+			<div class="page-content unselectable">
+				<div class="page-title">
+					<div class="page-title-text" id="title" onclick="fontShuffleTitle()">
+						<div>w</div>
+						<div>e</div>
+						<div>d</div>
+						<div>d</div>
+						<div>i</div>
+						<div>n</div>
+						<div>g</div>
+						<div>s</div>
+					</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="subtitle-text" style="margin-bottom: 5px;">All about you</div>
+					<div class="regular-text">
+						We work to bring just the right music for your wedding, whether it's elegant processional music played solo/duo or a full jazz band for a cocktail hour or reception.
+						<br><br>
+						<a href="documents/weddings-list.pdf" target="_blank">Here</a> is a list of some common requests for ceremony music that we have ready to go.
+						Let us know if you're interested in something not listed here, and we'll work to accommodate you if possible!
+					</div>
+				</div>
+				<div class="page-entry-full" style="padding-bottom: 0">
+					<div class="subtitle-text">Reviews</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Fantastic band for our wedding!</div>
+					<div class="regular-text reviews-text">
+						Ellis Green Music was a great addition to our spring wedding! They were very prompt and professional with communication.
+						Not only did they provide a great soundtrack, but they also took our wants and vision into consideration when creating the song list.
+						We were very pleased with the arrangement! Luckily, we will only be getting married once, but if I could I would hire Ellis Green all over again!
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Lisa, Phoenix</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Excellent, highly recommended!</div>
+					<div class="regular-text reviews-text">
+						Ellis Green Music was the perfect addition to our rehearsal dinner. Excellent musicians, beautiful music.
+						They know how to read a room, to complement the event without overpowering it. Would have them back anytime.
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Michael, Phoenix</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Just what we wanted: perfect relaxing vibe</div>
+					<div class="regular-text reviews-text">
+						If I could give 10 stars, I would. Ellis delivered the exact music we wanted during the cocktail hour at our daughter’s wedding.
+						Ellis was quick to respond to all our questions and requests and he is a delight to work with.
+						He requested a list of songs we would like to hear, so I gave him a long list of favorite standards.
+						From my list he compiled a wonderful song list that his group played beautifully. We had a sax player who was a wonderful addition to the cohesive sound.
+						They looked great in black tie and played beautifully!! I really enjoyed mixing with family and friends while enjoying the jazz music in the background.
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Robert, Mesa</div>
+				</div>
+				<div class="page-entry">
+					<div class="stars">&#8902;&#8902;&#8902;&#8902;&#8902;</div>
+					<div class="reviews-header-text">Unbelievably talented band!</div>
+					<div class="regular-text reviews-text">
+						Where do I start!? Ellis Green Music is THE band you need to hire for any occasion! I hope I don't overlook anything in this review! 
+						Ellis Green Music is an incredibly talented band! We hired the band for our wedding, and guests were coming up to us throughout and after the event just to rave about how good the band sounded! 
+						I found myself, at my own wedding, leaning back in my chair or out of a conversation to pay attention to the band and was constantly thinking to myself, "Wow! They're really good!" 
+						It was everything we could have asked for and even better than we could have imagined. Ellis Green Music can play!
+						They're soothing, they're lively, they present incredibly well, they're just the perfect band for your event! Ellis is also incredibly easy to work with. 
+						He is accommodating, reasonable, and just an all around good person. Our wedding site was well off the beaten bath and not too conveniently accessible for a jazz band. 
+						Yet, the band had no complaints and presented zero issues making it to the event on time, setting up, performing, and packing up! 
+						Beyond that, I threw a couple curveballs at Ellis just days before the wedding and asked him if his band could play a couple specific songs. 
+						Last minute requests, and yet Ellis Green Music was able to accommodate and perform those songs beautifully. 
+						I really cannot say enough good things about Ellis Green Music. You will absolutely not regret hiring this band! I promise you that!
+					</div>
+					<div class="small-text grey-text">&nbsp;&mdash;&nbsp;Eric, Gold Canyon</div>
+				</div>
+				<div class="page-entry-full">
+					<div class="regular-text grey-text" style="text-align: center">View these and more verified reviews on <a href="https://www.zola.com/wedding-vendors/wedding-bands-djs/ellis-green-music" target="_blank">zola.com</a>.</div>
+				</div>
+			</div>
+		</div>
+		<!-- End page content -->
+		<script type="text/javascript" src="scripts/shuffle.js"></script>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/font-shuffle.js"></script>
+		<script type="text/javascript" src="scripts/loaded.js"></script>
+	</body>	
+</html>
