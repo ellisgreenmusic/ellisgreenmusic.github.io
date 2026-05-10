@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="theme-color" content="">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- CSS -->
+		<style>
+			body {
+				font-family: sans-serif;
+				font-size: 15px;
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+				overflow-y: hidden;
+				-webkit-user-select: none;
+				   -moz-user-select: none;
+					-ms-user-select: none;
+						user-select: none;
+			}
+			#page {
+				z-index: 0;
+			}
+			#loading {
+				position: absolute;
+				background-color: #141414;
+				width: 100vw;
+				height: 100vh;
+				text-align: center;
+				line-height: 100vh;
+				color: white;
+				z-index: -99;
+			}
+			.wheel-container {
+				width: 100vw;
+				height: 100vh;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+			}
+			.wheel-title {
+				font-weight: bold;
+				text-align: center;
+				padding-top: 5vh;
+				margin-bottom: 3vh;
+				height: 2vh;
+			}
+			.wheel {
+				width: 80vh;
+				height: 80vh;
+				-webkit-clip-path: inset(0 0 0 0 round 50%);
+				        clip-path: inset(0 0 0 0 round 50%);
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				cursor: pointer;
+			}
+			.spinning {
+				-webkit-transition: -webkit-transform 5s ease-out;
+				transition: -webkit-transform 5s ease-out;
+				-o-transition: transform 5s ease-out;
+				transition: transform 5s ease-out;
+				transition: transform 5s ease-out, -webkit-transform 5s ease-out;
+			}
+			.wheel-entry {
+				width: 40vh;
+				-webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+				        clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+				-webkit-transform-origin: left;
+				    -ms-transform-origin: left;
+				        transform-origin: left;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				-webkit-box-pack: right;
+				    -ms-flex-pack: right;
+				        justify-content: right;  
+			}
+			.arrow-container {
+				position: absolute;
+				width: 100px;
+				height: 100vh;
+				z-index: 1;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex; 
+				-webkit-box-align: center; 
+				    -ms-flex-align: center; 
+				        align-items: center;
+			}
+			#left-arrow-container {
+				left: 0;
+			}
+			#right-arrow-container {
+				right: 0;
+			}
+			.arrow {
+				margin-left: 10px;
+				margin-right: 10px;
+				border-radius: 40px;
+				height: 80px;
+				width: 80px;
+				font-size: 20pt;
+				cursor: pointer;
+				background-color: #f2f2f2;
+				line-height: 80px;
+				text-align: center;
+			}
+			#pointer {
+				position: absolute;
+				left: calc(50% + 40vh + 10px);
+				top: 48vh;
+				margin: auto 0;
+				height: 4vh;
+				width: 3.46410162vh;
+				background-color: #141414;
+				-webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+				        clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+			}
+		</style>
+		<!-- Title -->
+		<title>The Wheel</title>
+	</head>
+	<body>
+		<div id="loading">Loading...</div>
+
+		<div class="arrow-container" id="left-arrow-container">
+			<div class="arrow" id="left-arrow" onclick="switchWheel(-1);"><</div>
+		</div>
+		<div class="arrow-container" id="right-arrow-container">
+			<div class="arrow" id="right-arrow" onclick="switchWheel(1);">></div>
+		</div>
+		
+		<div id="pointer">&#8592;</div>
+		
+		<div id="page"></div>
+		
+		<script type="text/javascript">
+			//DOM vars
+			const page = document.getElementById("page");
+			const backgroundColors = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff", "#fffffc"];
+			//wheel vars
+			let wheelContainers;
+			let wheels;
+			let wheelCount;
+			let currentWheel;
+			let wheelTitles;
+			let wheelEntries;
+			let wheelIndices;
+			let spinSemafore = false;
+			//URL for Google Apps Script that fetches the Wheel doc
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbyDzYekkUuOlRs9kN71MsmBzWGIJBAnr_yEMBMZ2003AUyAcKGcn_NNjWuFd1Uz1Cg/exec';
+			//Dummy div to contain HTML from Google doc
+			const listContainer = document.createElement("div");
+			
+			//Helper fxn
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+			
+			//Gets the list HTML from the Wheel doc by calling Google Apps Script; puts results into listContainer
+			async function getList() {
+				try {
+					let postParameters = {
+						redirect: "follow",
+						method: "POST",
+						headers: {'Content-Type': 'text/plain;charset=utf-8'}
+					};
+					const response = await fetch(scriptURL, postParameters);
+					if (!response.ok) {
+						throw new Error(`Response status: ${response.status}`);
+					}
+					const result = await response.json();
+					listContainer.innerHTML = result.data;
+					return true;
+				} catch (error) {
+					window.alert(error.message);
+					return false;
+				}
+			}
+			
+			async function fillWheels() {
+				try {
+					if(await getList()) {
+						currentWheel = 0;
+						let htmlSections = Array.from(listContainer.querySelectorAll('ul'));
+						wheelCount = htmlSections.length / 2;
+						
+						let tempTitles = new Array(wheelCount);
+						let tempEntries = new Array(wheelCount);
+						let tempIndices = new Array(wheelCount);
+						
+						//set array contents
+						for(let i = 0; i < wheelCount; i++) {
+							tempTitles[i] = htmlSections[i * 2].querySelectorAll("span")[0].innerHTML;
+							tempIndices[i] = 0;
+							
+							tempEntries[i] = new Array();
+							let tempContainer = htmlSections[(i * 2) + 1].querySelectorAll("span");
+							for(let j = 0; j < tempContainer.length; j++) {
+								tempEntries[i].push(tempContainer[j].innerHTML);
+							}
+						}
+						
+						wheelTitles = tempTitles;
+						wheelEntries = tempEntries;
+						wheelIndices = tempIndices;
+						
+						/*
+						console.log(wheelTitles);
+						console.log(wheelEntries);
+						*/
+						
+						let pageHTML = "";
+						for(let i = 0; i < wheelCount; i++) {
+							pageHTML += "<div class='wheel-container' style='background-color: " + backgroundColors[i % backgroundColors.length] + "; display: ";
+							if(i === 0) {
+								pageHTML += "block'>";
+							} else {
+								pageHTML += "none'>";
+							}
+							pageHTML += "<div class='wheel-title'>" + wheelTitles[i] + "</div><div class='wheel' onclick='spin()'>";
+							for(let j = 0; j < wheelEntries[i].length; j++) {
+								let entryText = wheelEntries[i][j];
+								if(entryText.length > 25) {
+									entryText = entryText.substring(0, 25) + "...";
+								}
+								
+								pageHTML += "<div class='wheel-entry' ";
+								
+								if(wheelEntries[i].length === 1) {
+									pageHTML +=  "<div class='wheel-entry' style='height: 80vh; width: 80vh; clip-path: none; ";
+								} else if (wheelEntries[i].length === 2) {
+									pageHTML +=  "<div class='wheel-entry' style='height: 80vh; clip-path: none; ";
+								} else {
+									pageHTML +=  "<div class='wheel-entry' style='height: " + (2 * 40 * Math.tan(2 * Math.PI / (wheelEntries[i].length * 2))) + "vh; "; //2 * r * tan(theta)
+								}
+								
+								
+								pageHTML += "background-color: ";
+								if(j % 4 === 0) {
+									pageHTML += "#ffffff"
+								} else if(j % 4 === 1) {
+									pageHTML += "#e6e6e6"
+								} else if(j % 4 === 2) {
+									pageHTML += "#f2f2f2"
+								} else if(j % 4 === 3) {
+									pageHTML += "#d9d9d9"
+								}
+								
+								pageHTML += "; transform: rotate(" + (-360 * j / wheelEntries[i].length) + "deg)'>" + entryText + "&nbsp&nbsp&nbsp</div>";
+								
+							}
+							pageHTML += "</div></div>";
+						}
+						page.innerHTML = pageHTML;
+						
+						wheelContainers = document.getElementsByClassName("wheel-container");
+						wheels = document.getElementsByClassName("wheel");
+						//Just in case
+						while(wheelContainers.length === 0 || wheelContainers.length === undefined || wheels.length === 0 || wheels.length === undefined) {
+							await sleep(500);
+							wheelContainers = document.getElementsByClassName("wheel-container");
+							wheels = document.getElementsByClassName("wheel");
+						}
+					}
+				} catch (error) {
+					window.alert(error);
+				}
+			}
+			
+			function switchWheel(difference) {
+				currentWheel = (wheelCount + currentWheel + difference) % wheelCount;
+				for(let i = 0; i < wheelCount; i++) {
+					if(i === currentWheel) {
+						wheelContainers[i].style.display = "block";
+					} else {
+						wheelContainers[i].style.display = "none";
+					}
+				}
+			}
+			
+			function spin() {
+				if(spinSemafore === true) {
+					return;
+				} else {
+					spinSemafore = true;
+					
+					let rotationDegrees = (360 * 10) + (360 * Math.random());
+					wheelIndices[currentWheel] = Math.round(((rotationDegrees % 360) / 360) * wheelEntries[currentWheel].length) % wheelEntries[currentWheel].length;
+					
+					wheels[currentWheel].style.transform = "none";
+					setTimeout(() => {
+						wheels[currentWheel].classList.add("spinning");
+						wheels[currentWheel].style.transform = "rotate(" + rotationDegrees + "deg)";
+						setTimeout(() => {
+							wheels[currentWheel].classList.remove("spinning");
+							spinSemafore = false;
+							if(wheelEntries[currentWheel][wheelIndices[currentWheel]].substring(0, 4) === "http") {
+								window.open(wheelEntries[currentWheel][wheelIndices[currentWheel]], '_blank').focus();
+							}
+						}, 5000);
+					}, 10);
+				}
+			}
+			
+			fillWheels();
+		</script>
+	</body>	
+</html>
