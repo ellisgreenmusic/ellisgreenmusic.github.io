@@ -124,6 +124,16 @@
 				line-height: 80px;
 				text-align: center;
 			}
+			#link-container {
+				position: absolute;
+				bottom: 10px;
+				width: 100vw;
+				height: -webkit-min-content;
+				height: -moz-min-content;
+				height: min-content;
+				z-index: 1;
+				text-align: center;
+			}
 			#pointer {
 				position: absolute;
 				left: calc(50% + 40vh + 10px);
@@ -147,6 +157,9 @@
 		</div>
 		<div class="arrow-container" id="right-arrow-container">
 			<div class="arrow" id="right-arrow" onclick="switchWheel(1);">></div>
+		</div>
+		<div id="link-container">
+			<a href="#" onclick="IMGFeelingLucky()">IMG Feeling Lucky</a>
 		</div>
 		
 		<div id="pointer">&#8592;</div>
@@ -323,6 +336,10 @@
 			}
 			
 			fillWheels();
+			
+			function IMGFeelingLucky() {
+				window.open("https://www.google.com/search?q=img+" + ((Math.random() + "").substring(2, 6)) + "+site%3Ayoutube.com&btnI=1", '_blank').focus();
+			}
 		</script>
 	</body>	
 </html>
