@@ -338,13 +338,22 @@
 			fillWheels();
 			
 			function IMGFeelingLucky() {
-				let randomLink = "https://www.google.com/search?q=img";
+				let randomLink = "https://www.google.com/search?q=";
+				
+				if(Math.random() > .5) {
+					randomLink += "IMG";
+				} else {
+					randomLink += "DSC";
+				}
+				
 				if(Math.random() > .5) {
 					randomLink += "_";
 				} else {
 					randomLink += "+";
 				}
+				
 				randomLink += ((Math.random() + "").substring(2, 6)) + "+site%3Ayoutube.com&btnI=1";
+				
 				window.open(randomLink, '_blank').focus();
 			}
 		</script>
