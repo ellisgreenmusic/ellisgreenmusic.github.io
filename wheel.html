@@ -159,7 +159,7 @@
 			<div class="arrow" id="right-arrow" onclick="switchWheel(1);">></div>
 		</div>
 		<div id="link-container">
-			<a id="IMG-link" href="#" onclick="IMG()"></a>
+			<a href="#" onclick="IMG()">IMG Feeling Lucky</a>
 		</div>
 		
 		<div id="pointer">&#8592;</div>
@@ -183,10 +183,6 @@
 			const scriptURL = 'https://script.google.com/macros/s/AKfycbyDzYekkUuOlRs9kN71MsmBzWGIJBAnr_yEMBMZ2003AUyAcKGcn_NNjWuFd1Uz1Cg/exec';
 			//Dummy div to contain HTML from Google doc
 			const listContainer = document.createElement("div");
-			
-			//Set IMG link pun name
-			let IMGPuns = ["IMG Feeling Lucky", "Help Me, IMGesus", "DSCovery"];
-			document.getElementById("IMG-link").innerHTML = IMGPuns[Math.floor(Math.random() * IMGPuns.length)];
 			
 			//Helper fxn
 			function sleep(ms) {
@@ -344,10 +340,14 @@
 			function IMG() {
 				let randomLink = "https://www.google.com/search?q=";
 				
-				if(Math.random() > .5) {
+				let prefixDecider = Math.random();
+				
+				if(prefixDecider < .33) {
 					randomLink += "IMG";
-				} else {
+				} else if(prefixDecider < .66){
 					randomLink += "DSC";
+				} else {
+					randomLink += "MVI";
 				}
 				
 				if(Math.random() > .5) {
