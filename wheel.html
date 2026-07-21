@@ -22,6 +22,31 @@
 					-ms-user-select: none;
 						user-select: none;
 			}
+			.overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				background-color: rgba(0, 0, 0, 0.75);
+				opacity: 0;
+				-webkit-transition: opacity 0.5s;
+				transition: opacity 0.5s;
+				pointer-events: none;
+			}
+			.overlay-visible {
+				opacity: 1 !important;
+				pointer-events: auto !important;
+				cursor: pointer;
+			}
+			#overlay-text {
+				width: 100%;
+				line-height: 100vh;
+				text-align: center;
+				font-size: 40pt;
+				color: white;
+			}
 			#page {
 				z-index: 0;
 			}
@@ -58,8 +83,7 @@
 			.wheel {
 				width: 80vh;
 				height: 80vh;
-				-webkit-clip-path: inset(0 0 0 0 round 50%);
-				        clip-path: inset(0 0 0 0 round 50%);
+				clip-path: inset(0 0 0 0 round 50%);
 				position: relative;
 				margin-left: auto;
 				margin-right: auto;
@@ -68,14 +92,12 @@
 			.spinning {
 				-webkit-transition: -webkit-transform 5s ease-out;
 				transition: -webkit-transform 5s ease-out;
-				-o-transition: transform 5s ease-out;
 				transition: transform 5s ease-out;
 				transition: transform 5s ease-out, -webkit-transform 5s ease-out;
 			}
 			.wheel-entry {
 				width: 40vh;
-				-webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
-				        clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+				clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -142,8 +164,7 @@
 				height: 4vh;
 				width: 3.46410162vh;
 				background-color: #141414;
-				-webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
-				        clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+				clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
 			}
 		</style>
 		<!-- Title -->
@@ -151,6 +172,11 @@
 	</head>
 	<body>
 		<div id="loading">Loading...</div>
+
+		<div class="overlay" id="overlay" onclick="closeOverlay();">
+			<div id="overlay-text"></div>
+			<audio src="wheel-files/applause.mp3" type="audio/mpeg" id="applause-track" style="display: none;"></audio>
+		</div>
 
 		<div class="arrow-container" id="left-arrow-container">
 			<div class="arrow" id="left-arrow" onclick="switchWheel(-1);"><</div>
@@ -170,6 +196,9 @@
 			//DOM vars
 			const page = document.getElementById("page");
 			const backgroundColors = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff", "#fffffc"];
+			const overlay = document.getElementById("overlay");
+			const overlayText = document.getElementById("overlay-text");
+			const applauseTrack = document.getElementById("applause-track");
 			//wheel vars
 			let wheelContainers;
 			let wheels;
@@ -301,14 +330,21 @@
 			}
 			
 			function switchWheel(difference) {
+				wheelContainers[currentWheel].style.display = "none";
 				currentWheel = (wheelCount + currentWheel + difference) % wheelCount;
-				for(let i = 0; i < wheelCount; i++) {
-					if(i === currentWheel) {
-						wheelContainers[i].style.display = "block";
-					} else {
-						wheelContainers[i].style.display = "none";
-					}
-				}
+				wheelContainers[currentWheel].style.display = "block";
+			}
+			
+			function openOverlay() {
+				applauseTrack.load();
+				applauseTrack.play();
+				overlayText.innerHTML = wheelEntries[currentWheel][wheelIndices[currentWheel]];
+				overlay.classList.add("overlay-visible");
+			}
+			
+			function closeOverlay() {
+				applauseTrack.pause();
+				overlay.classList.remove("overlay-visible");
 			}
 			
 			function spin() {
@@ -329,6 +365,8 @@
 							spinSemafore = false;
 							if(wheelEntries[currentWheel][wheelIndices[currentWheel]].substring(0, 4) === "http") {
 								window.open(wheelEntries[currentWheel][wheelIndices[currentWheel]], '_blank').focus();
+							} else {
+								openOverlay();
 							}
 						}, 5000);
 					}, 10);
