@@ -63,6 +63,8 @@
 			.wheel-container {
 				width: 100vw;
 				height: 100vh;
+				background-position: center;
+				background-repeat: repeat;
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
@@ -73,12 +75,21 @@
 				    -ms-flex-pack: center;
 				        justify-content: center;
 			}
+			.wheel-container-bg1 { background-image: url("wheel-files/bg1.png"); }
+			.wheel-container-bg2 { background-image: url("wheel-files/bg5.png"); } 
+			.wheel-container-bg3 { background-image: url("wheel-files/bg2.png"); } 
+			.wheel-container-bg4 { background-image: url("wheel-files/bg6.png"); } 
+			.wheel-container-bg5 { background-image: url("wheel-files/bg3.png"); } 
+			.wheel-container-bg6 { background-image: url("wheel-files/bg7.png"); } 
+			.wheel-container-bg7 { background-image: url("wheel-files/bg4.png"); } 
+			.wheel-container-bg8 { background-image: url("wheel-files/bg8.png"); } 
 			.wheel-title {
+				color: white;
 				font-weight: bold;
 				text-align: center;
-				padding-top: 5vh;
+				padding-top: 4vh;
 				margin-bottom: 3vh;
-				height: 2vh;
+				height: 3vh;
 			}
 			.wheel {
 				width: 80vh;
@@ -156,6 +167,9 @@
 				z-index: 1;
 				text-align: center;
 			}
+			#link-container a {
+				color: #00FFFF;
+			}
 			#pointer {
 				position: absolute;
 				left: calc(50% + 40vh + 10px);
@@ -195,7 +209,6 @@
 		<script type="text/javascript">
 			//DOM vars
 			const page = document.getElementById("page");
-			const backgroundColors = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff", "#fffffc"];
 			const overlay = document.getElementById("overlay");
 			const overlayText = document.getElementById("overlay-text");
 			const applauseTrack = document.getElementById("applause-track");
@@ -273,7 +286,7 @@
 						
 						let pageHTML = "";
 						for(let i = 0; i < wheelCount; i++) {
-							pageHTML += "<div class='wheel-container' style='background-color: " + backgroundColors[i % backgroundColors.length] + "; display: ";
+							pageHTML += "<div class='wheel-container wheel-container-bg" + ((i + 1) % 8) + "' style='display: ";
 							if(i === 0) {
 								pageHTML += "block'>";
 							} else {
@@ -295,7 +308,6 @@
 								} else {
 									pageHTML +=  "<div class='wheel-entry' style='height: " + (2 * 40 * Math.tan(2 * Math.PI / (wheelEntries[i].length * 2))) + "vh; "; //2 * r * tan(theta)
 								}
-								
 								
 								pageHTML += "background-color: ";
 								if(j % 4 === 0) {
@@ -379,23 +391,31 @@
 				let randomLink = "https://www.google.com/search?q=";
 				
 				let prefixDecider = Math.random();
+				let spacerDecider = Math.random();
 				
-				if(prefixDecider < .33) {
-					randomLink += "IMG";
-				} else if(prefixDecider < .66){
+				if(prefixDecider < .3333) {
 					randomLink += "DSC";
+					if(spacerDecider < .33) {
+						randomLink += "_";
+					} else if(spacerDecider < .67) {
+						randomLink += "+";
+					} else {
+						randomLink += "F";
+					}
 				} else {
-					randomLink += "MVI";
-				}
-				
-				if(Math.random() > .5) {
-					randomLink += "_";
-				} else {
-					randomLink += "+";
+					if(prefixDecider < .6667) {
+						randomLink += "IMG";
+					} else {
+						randomLink += "MVI";
+					}
+					if(spacerDecider > .5) {
+						randomLink += "_";
+					} else {
+						randomLink += "+";
+					}
 				}
 				
 				randomLink += ((Math.random() + "").substring(2, 6)) + "+site%3Ayoutube.com&btnI=1";
-				
 				window.open(randomLink, '_blank').focus();
 			}
 		</script>
