@@ -1,4 +1,5 @@
 //reveal holiday sidebar links if Novermber or December
+/*
 let month = new Date().getMonth();
 if(month === 10 || month === 11) {
 	let holidayLinks = document.getElementsByClassName("holiday-link");
@@ -6,6 +7,7 @@ if(month === 10 || month === 11) {
 		holidayLinks[i].style.display = "block";
 	}
 }
+*/
 
 let page = document.getElementById("page");
 let loadingScreen = document.getElementById("loading-screen");
