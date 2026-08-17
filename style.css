@@ -19,7 +19,6 @@ img {
 }
 .transitionless {
 	-webkit-transition: none !important;
-	-o-transition: none !important;
 	transition: none !important;
 }
 .condensed {
@@ -57,7 +56,6 @@ a {
 	/* Animate background color on hover */
 	background-color: white;
 	-webkit-transition: background-color .15s;
-	-o-transition: background-color .15s;
 	transition: background-color .15s;
 }
 /* Sidebar */
@@ -78,7 +76,6 @@ a {
 .sidebar-mobile {
 	/* Animate slide in */
 	-webkit-transition: left 0.5s;
-	-o-transition: left 0.5s;
 	transition: left 0.5s;
 	position: fixed;
 	top: 0;
@@ -124,7 +121,6 @@ a {
 	padding-left: 30px;
 	padding-right: 30px;
 	-webkit-transition: background-color .1s;
-	-o-transition: background-color .1s;
 	transition: background-color .1s;
 }
 .sidebar-link-mobile {
@@ -168,7 +164,6 @@ a {
 	margin-right: 15px;
 	background-color: white;
 	-webkit-transition: background-color .15s;
-	-o-transition: background-color .15s;
 	transition: background-color .15s;
 }
 .overlay {
@@ -184,7 +179,6 @@ a {
 	background-color: black;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s;
-	-o-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 	/* Ignore cursor when not shown */
 	pointer-events: none;
@@ -200,7 +194,6 @@ a {
 	width: 100vw;
 	-webkit-transition: opacity .4s, -webkit-transform .4s;
 	transition: opacity .4s, -webkit-transform .4s;
-	-o-transition: opacity .4s, transform .4s;
 	transition: opacity .4s, transform .4s;
 	transition: opacity .4s, transform .4s, -webkit-transform .4s;
 	/* Inactive */
@@ -317,7 +310,6 @@ a {
 .gallery-image {
 	-webkit-transition: -webkit-transform .2s;
 	transition: -webkit-transform .2s;
-	-o-transition: transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
 }
@@ -355,7 +347,6 @@ a {
 	        transform: scale(1);
 	-webkit-transition: -webkit-transform .25s;
 	transition: -webkit-transform .25s;
-	-o-transition: transform .25s;
 	transition: transform .25s;
 	transition: transform .25s, -webkit-transform .25s;
 }
@@ -374,7 +365,6 @@ a {
 	text-align: center;
 	text-shadow: 0 2px 2px #000000;
 	-webkit-transition: opacity .75s;
-	-o-transition: opacity .75s;
 	transition: opacity .75s;
 	/* Mobile */
 	font-size: 14pt; 
@@ -397,6 +387,11 @@ a {
 .subtitle-text {
 	font-size: 16pt;
 	line-height: 160%;
+	margin-bottom: 5px;
+}
+.subtitle-entry {
+	padding-bottom: 0px !important;
+	margin-bottom: -15px !important;
 }
 .albums-header-text {
 	font-weight: bold;
@@ -410,6 +405,10 @@ a {
 }
 .reviews-text {
 	padding-bottom: 5px;
+}
+.reviews-footer-text {
+	line-height: initial !important;
+	text-align: center;
 }
 .stars {
 	font-size: 14pt;
@@ -447,7 +446,6 @@ a {
 	        -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .25);
 	                box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .25);
 	-webkit-transition: margin-top .15s, opacity .15s;
-	-o-transition: margin-top .15s, opacity .15s;
 	transition: margin-top .15s, opacity .15s;
 }
 .contact-tooltip::after {
@@ -466,16 +464,19 @@ a {
 	color: #808080;
 }
 .holiday-list {
-	column-count: 1;
+	-webkit-column-count: 1;
+	   -moz-column-count: 1;
+	        column-count: 1;
 }
 /* Images */
 .banner-image-container {
 	width: 100%; 
-	height: 50vh;
+	height: 35vh;
 	background-color: #141414;
 }
 .banner-image {
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	height: 100%;
 	width: 100%;
 }
@@ -496,7 +497,6 @@ a {
 	min-width: 140px;
 	-webkit-transition: -webkit-transform .2s;
 	transition: -webkit-transform .2s;
-	-o-transition: transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
 	/* Mobile sizing */
@@ -550,7 +550,6 @@ a {
 	width: 100vw;
 	height: 100vh;
 	-webkit-transition: opacity .4s;
-	-o-transition: opacity .4s;
 	transition: opacity .4s;
 }
 .loading-circle {
@@ -648,7 +647,9 @@ a {
 		padding-top: 40px;
 	}
 	.holiday-list {
-		column-count: 2;
+		-webkit-column-count: 2;
+		   -moz-column-count: 2;
+		        column-count: 2;
 	}
 	/* For desktop, only show desktop calendar */
 	.calendar-desktop {
@@ -701,5 +702,8 @@ a {
 	}
 	.logo-image, .gallery-image {
 		cursor: pointer;
+	}
+	.banner-image-container {
+		height: 50vh;
 	}
 }
