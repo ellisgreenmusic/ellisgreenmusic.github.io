@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -285,7 +292,7 @@ a {
 }
 /* For positioning page title */
 .page-entry {
-	width: 350px;
+	width: 740px;
 	max-width: 100%;
 	padding: 20px;
 }
@@ -293,13 +300,16 @@ a {
 	width: 740px;
 	max-width: 100%;
 	padding: 20px;
-}=
+}
 .page-image-entry {
 	text-align: center;
 	padding-bottom: 0;
 }
 .page-image {
+	-o-object-fit: cover;
+	   object-fit: cover;
 	width: 100%;
+	max-width: 75vh;
 	        -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
 	                box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
 }
@@ -471,7 +481,7 @@ a {
 /* Images */
 .banner-image-container {
 	width: 100%; 
-	height: 35vh;
+	height: 40vh;
 	background-color: #141414;
 }
 .banner-image {
@@ -500,7 +510,7 @@ a {
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
 	/* Mobile sizing */
-	width: 48%;
+	width: 24%;
 }
 .logo-image {
 	border-radius: 5px;
@@ -607,13 +617,16 @@ a {
 		height: 90pt;
 	}
 	.page-image {
-		max-height: none;
+		max-width: none;
 	}
 	.page-content {
 		margin-top: 30px;
 	}
 	.page-content-spacer {
 		height: 30px;
+	}
+	.page-entry {
+		width: 350px !important;
 	}
 	.big-text {
 		font-size: 34pt;
